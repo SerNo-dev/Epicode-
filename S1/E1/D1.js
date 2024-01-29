@@ -87,4 +87,4 @@ if(name1.toLowerCase() === name2.toLowerCase()) {
     console.log('true')
 } else {
   console.log('false')
-}
+};
