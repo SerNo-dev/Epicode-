@@ -20,7 +20,7 @@ REGOLE
  5.Undefined: questa è una variabile dichiarata ma a cui non è stato assegnato un valore  */
 
 /* ESERCIZIO 2
- Crea una variable chiamata "myName" e assegna ad essa il tuo nome, sotto forma di stringa.
+ Crea una variable chiamata "myName" e assegna ad essa il tuo nome, sotto forma di stringa.x
 */
 
  let myName = 'Sergio';
