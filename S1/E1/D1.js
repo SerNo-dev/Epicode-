@@ -88,3 +88,15 @@ if(name1.toLowerCase() === name2.toLowerCase()) {
 } else {
   console.log('false')
 };
+
+
+let name3 = 'john';
+let name4 = 'John';
+
+let verifica = name3 !== name4
+console.log(verifica)
+
+verifica = name3.toLowerCase() !== name4.toLowerCase() 
+console.log(verifica)
+
+// .In altre parole, stai assegnando a verifica il risultato della verifica di disuguaglianza tra name3 e name4.
