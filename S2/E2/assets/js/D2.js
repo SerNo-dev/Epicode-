@@ -5,10 +5,14 @@
 let numero1 = 20;
 let numero2 = 10;
 
-if (numero1 > numero2 || numero2 > numero1 ) {
-  console.log(numero1||numero2 +   "è maggiore")
-
+if (numero1 > numero2) {
+  console.log(numero1 + " è maggiore di " + numero2);
+} else if (numero2 > numero1) {
+  console.log(numero2 + " è maggiore di " + numero1);
+} else {
+  console.log("I numeri sono uguali");
 }
+
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
