@@ -44,11 +44,12 @@ if ( resto === 0) {
 let intero1 = 5;
 let intero2 = 8;
 
-if ( (intero1 === 8 || intero1+intero2 === 8) || (intero2 === 8 || intero1+intero2 === 8)){
-  console.log('Il valore di uno dei due è 8 o la lora somma è 8')
+if (intero1 === 8 || intero2 === 8 || intero1 + intero2 === 8) {
+  console.log('Il valore di uno dei due è 8 o la loro somma è 8');
 } else {
-  console.log('Non c\'è un 8')
+  console.log('Non c\'è un 8');
 }
+
 
 
 /* ESERCIZIO 5
