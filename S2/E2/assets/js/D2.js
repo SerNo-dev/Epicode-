@@ -41,8 +41,8 @@ if ( resto === 0) {
 */
 
 
-let intero1 = 5;
-let intero2 = 8;
+let intero1 = 3;
+let intero2 = 4;
 
 if (intero1 === 8 || intero2 === 8 || intero1 + intero2 === 8) {
   console.log('Il valore di uno dei due è 8 o la loro somma è 8');
@@ -58,7 +58,7 @@ if (intero1 === 8 || intero2 === 8 || intero1 + intero2 === 8) {
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-let totalShoppingCart = 60;
+let totalShoppingCart = 42;
 let spedizione = 10;
 
 if ( totalShoppingCart > 50) {
@@ -73,7 +73,7 @@ if ( totalShoppingCart > 50) {
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
- totalShoppingCart = 40;
+ totalShoppingCart = 50;
  spedizione = 10;
 promozione =  totalShoppingCart + (totalShoppingCart * (20/100));
 
