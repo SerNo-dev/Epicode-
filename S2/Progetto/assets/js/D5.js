@@ -142,3 +142,82 @@ console.log('***ESERCIZIO9***');
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
+const charactersArray = ['g', 'n', 'u', 'z', 'd'];
+const alphabet = 'abcdefghilmnopqrstuvz';
+const  array2 = [];
+
+for (let i = 0; i < charactersArray.length; i++) {
+  const lettere = charactersArray[i]
+
+  switch (lettere) {
+    case 'a':
+      array2.push(1);
+      break;
+    case 'b':
+      array2.push(2);
+      break;
+    case 'c':
+      array2.push(3);
+      break;
+    case 'd':
+      array2.push(4);
+      break;
+    case 'e':
+      array2.push(5);
+      break;
+    case 'f':
+      array2.push(6);
+      break;
+    case 'g':
+      array2.push(7);
+      break;
+    case 'h':
+      array2.push(8);
+      break;
+    case 'i':
+      array2.push(9);
+      break;
+    case 'l':
+      array2.push(10);
+      break;
+    case 'm':
+      array2.push(11);
+      break;
+    case 'n':
+      array2.push(12);
+      break;
+    case 'o':
+      array2.push(13);
+      break;
+    case 'p':
+      array2.push(14);
+      break;
+    case 'q':
+      array2.push(15);
+      break;
+    case 'r':
+      array2.push(16);
+      break;
+    case 's':
+      array2.push(17);
+      break;
+    case 't':
+      array2.push(18);
+      break;
+    case 'u':
+      array2.push(19);
+      break;
+    case 'v':
+      array2.push(20);
+      break;
+    case 'z':
+      array2.push(21);
+      break;
+
+    default:
+      console.log(`Non vi sono più lettere`);
+  }
+}
+
+console.log(array2);
+console.log('***ESERCIZIO10***');
