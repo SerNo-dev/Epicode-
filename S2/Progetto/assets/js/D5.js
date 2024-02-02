@@ -53,7 +53,7 @@ function sposta(array) {
 }
 let spostato = sposta(pets);
 console.log(spostato);
-console.log('***ESERCIZIO4***')
+console.log('***ESERCIZIO4***');
 /* ESERCIZIO 5
     Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.
 */
@@ -102,10 +102,10 @@ console.log('***ESERCIZIO6***')
 const justTrims = []
 for (i = 0; i < cars.length; i++) {
   let prendiamo = cars[i].trims.shift();
-  justTrims.push(prendiamo)
+  justTrims.push(prendiamo);
 }
-console.log(justTrims)
-console.log('***ESERCIZIO7***')
+console.log(justTrims);
+console.log('***ESERCIZIO7***');
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
@@ -136,7 +136,7 @@ while (n < numericArray.length) {
 
   n++;
 }
-console.log('***ESERCIZIO9***')
+console.log('***ESERCIZIO9***');
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
     dell'alfabeto italiano.
