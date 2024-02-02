@@ -15,7 +15,7 @@ const pets = ['dog', 'cat', 'hamster', 'redfish']
 for (i = 0; i < pets.length; i++) {
   console.log(pets[i])
 }
-
+console.log('***ESERCIZIO1***')
 /* ESERCIZIO 2
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
 */
@@ -26,6 +26,7 @@ function ordinaArray(array) {
 }
 let ordina = ordinaArray(pets);
 console.log(ordina);
+console.log('***ESERCIZIO2***')
 /* ESERCIZIO 3
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
@@ -38,6 +39,9 @@ function invertiArray(inverti) {
 let arrayInvertito = invertiArray(pets);
 
 console.log(arrayInvertito);
+
+console.log('***ESERCIZIO3***')
+
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
@@ -49,7 +53,7 @@ function sposta(array) {
 }
 let spostato = sposta(pets);
 console.log(spostato)
-
+console.log('***ESERCIZIO4***')
 /* ESERCIZIO 5
     Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.
 */
@@ -78,6 +82,7 @@ for (i = 0; i < cars.length; i++) {
   cars[i].licensePlate = '45g257f'
 }
 console.log(cars)
+console.log('***ESERCIZIO5***')
 /* ESERCIZIO 6
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
@@ -89,6 +94,8 @@ for (i = 0; i < cars.length; i++) {
   cars[i].trims.pop()
 }
 console.log(cars)
+
+console.log('***ESERCIZIO6***')
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
@@ -98,6 +105,7 @@ for (i = 0; i < cars.length; i++) {
   justTrims.push(prendiamo)
 }
 console.log(justTrims)
+console.log('***ESERCIZIO7***')
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
@@ -111,6 +119,7 @@ for (let i = 0; i < cars.length; i++) {
     console.log('Buzz');
   }
 }
+console.log('***ESERCIZIO8***')
 /* ESERCIZIO 9
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
 */
@@ -127,86 +136,9 @@ while (n < numericArray.length) {
 
   n++;
 }
+console.log('***ESERCIZIO9***')
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
-const charactersArray = ['g', 'n', 'u', 'z', 'd'];
-const alphabet = 'abcdefghilmnopqrstuvz';
-const  array2 = [];
-
-for (let i = 0; i < charactersArray.length; i++) {
-  const lettere = charactersArray[i]
-
-  switch (lettere) {
-    case 'a':
-      array2.push(1);
-      break;
-    case 'b':
-      array2.push(2);
-      break;
-    case 'c':
-      array2.push(3);
-      break;
-    case 'd':
-      array2.push(4);
-      break;
-    case 'e':
-      array2.push(5);
-      break;
-    case 'f':
-      array2.push(6);
-      break;
-    case 'g':
-      array2.push(7);
-      break;
-    case 'h':
-      array2.push(8);
-      break;
-    case 'i':
-      array2.push(9);
-      break;
-    case 'l':
-      array2.push(10);
-      break;
-    case 'm':
-      array2.push(11);
-      break;
-    case 'n':
-      array2.push(12);
-      break;
-    case 'o':
-      array2.push(13);
-      break;
-    case 'p':
-      array2.push(14);
-      break;
-    case 'q':
-      array2.push(15);
-      break;
-    case 'r':
-      array2.push(16);
-      break;
-    case 's':
-      array2.push(17);
-      break;
-    case 't':
-      array2.push(18);
-      break;
-    case 'u':
-      array2.push(19);
-      break;
-    case 'v':
-      array2.push(20);
-      break;
-    case 'z':
-      array2.push(21);
-      break;
-   
-    default:
-      console.log(`Non vi sono più lettere`);
-  }
-}
-
-console.log(array2);
