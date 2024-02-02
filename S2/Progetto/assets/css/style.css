@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e9edee;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+#logo {
+    background-color: #222f3f;
+    height: 7vh;
+}
+
+#logo img {
+    height: 5vh;
+    padding: 10px 25px;
+
+}
+
+p {
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    color: white;
+
+}
+
+nav {
+    padding-left: 25px;
+    background-color: #364759;
+}
+
+main {
+    margin: 0;
+    text-align: center;
+
+}
+
+
+#gift {
+    display: block;
+    color: white;
+    background-color: #f56600;
+    margin: 35px;
+    padding: 10px;
+
+}
+
+#holiday {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    background-image: url(../images/bg-image.png);
+    background-size: cover;
+    margin: 35px;
+    flex-direction: column;
+}
+
+
+#holiday h1,
+#holiday p {
+    margin: 5px 0;
+    padding: 0;
+    color: white;
+    font-size: 1.2em;
+    line-height: 5vh;
+}
+
+#holiday h1 {
+    font-size: 2em;
+}
+
+article {
+    text-align: inline-block;
+    margin: 35px;
+    background-color: white;
+}
+
+article img {
+
+    margin: 25px;
+    max-width: 35vw;
+    max-height: 35vh;
+    border-radius: 10%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.418);
+}
+
+#shop {
+    text-align: start;
+    padding-left: 25px;
+    padding-top: 20px;
+    margin-bottom: -15px;
+}
+
+#shop h2,
+#shop p {
+
+    display: inline-block;
+    margin: 0;
+}
+
+#shop p {
+    color: #195669;
+    font-weight: bold;
+}
+
+#visore {
+    background-image: url(../images/img_9.png);
+    background-position: center;
+    height: 50vh;
+
+}
+.game h2,
+.game p {
+    color: black;
+    display: inline-block;
+    margin: 0;
+    padding-left: 15px;
+}
+
+.game p {
+    color: #195669;
+    font-weight: bold;
+}
+
+.game {
+    padding-bottom: 25px;
+    background-color: #e9edee;
+}
+
+#sound {
+    background-image: url(../images/img_10.png);
+    background-position: center;
+    height: 50vh;
+}
+
+footer {
+    background-color: #222f3f;
+    height: 20vh;
+    background-image: url(../images/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20vh;
+}
+
+#torna {
+    background-color: #364759;
+    text-align: center;
+    padding: 10px;
+}
+#back {
+
+    color: white;
+
+}

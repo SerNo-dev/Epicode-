@@ -99,15 +99,25 @@ console.log(reverseString('Bella li'))
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+ function upperFirst(parola) {
+   
+     const chart = parola.charAt(0); // Prendiamo la prima lettera 
+     const upper = chart.toUpperCase(); //Facciamo maiuscola la lettere presa sopra 
+     const restop = parola.slice(1); // resto della stringa dalla seconda letta in poi
+  return upper + restop
+ }
+ console.log(upperFirst('bella li amico'))
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
+ function cutString(stringa){
+   const newStringa =  stringa.slice(1,-1);
+   return newStringa
+ }
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
+ console.log(cutString('EPICODE'))
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
