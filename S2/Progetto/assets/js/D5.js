@@ -12,8 +12,8 @@ REGOLE
 */
 const pets = ['dog', 'cat', 'hamster', 'redfish']
 
-for(i= 0; i<pets.length; i++){
-   console.log(pets[i])
+for (i = 0; i < pets.length; i++) {
+  console.log(pets[i])
 }
 
 /* ESERCIZIO 2
@@ -25,14 +25,14 @@ function ordinaArray(array) {
   return ordina;
 }
 let ordina = ordinaArray(pets);
-console.log(ordina)
+console.log(ordina);
 /* ESERCIZIO 3
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
 
 function invertiArray(inverti) {
- let copia = inverti.slice();
- return copia.reverse()
+  let copia = inverti.slice();
+  return copia.reverse();
 }
 
 let arrayInvertito = invertiArray(pets);
@@ -40,7 +40,7 @@ let arrayInvertito = invertiArray(pets);
 console.log(arrayInvertito);
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
-*/ 
+*/
 function sposta(array) {
   let copia = array.slice();
   let prendi = copia.shift();
@@ -74,10 +74,10 @@ const cars = [
   },
 ]
 
- for ( i =0; i < cars.length; i++){
-    cars[i].licensePlate = '45g257f'
- }
- console.log(cars)
+for (i = 0; i < cars.length; i++) {
+  cars[i].licensePlate = '45g257f'
+}
+console.log(cars)
 /* ESERCIZIO 6
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
@@ -85,16 +85,16 @@ const cars = [
 let nuovaAuto = { model: 'Pegeot', licensePlate: 'GHI789', trims: ['life', 'style', 'r-line'], };
 cars.push(nuovaAuto);
 console.log(cars);
-for(i =0 ; i< cars.length; i++){
-    cars[i].trims.pop()
+for (i = 0; i < cars.length; i++) {
+  cars[i].trims.pop()
 }
 console.log(cars)
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
 const justTrims = []
-for( i = 0; i < cars.length; i++){
-  let prendiamo =  cars[i].trims.shift();
+for (i = 0; i < cars.length; i++) {
+  let prendiamo = cars[i].trims.shift();
   justTrims.push(prendiamo)
 }
 console.log(justTrims)
@@ -106,9 +106,9 @@ for (let i = 0; i < cars.length; i++) {
   let colore = cars[i].color;
 
   if (colore && colore.charAt(0).toLowerCase() === 'b') {
-      console.log('Fizz');
+    console.log('Fizz');
   } else {
-      console.log('Buzz');
+    console.log('Buzz');
   }
 }
 /* ESERCIZIO 9
@@ -117,15 +117,96 @@ for (let i = 0; i < cars.length; i++) {
 const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ]
-let  n = 0
-while(n < numericArray.length){
-  if(numericArray[n] === 32){
+let n = 0;
+while (n < numericArray.length) {
+  console.log(numericArray[n]);
+
+  if (numericArray[n] === 32) {
     break;
   }
+
+  n++;
 }
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
-const charactersArray = ['g', 'n', 'u', 'z', 'd']
+const charactersArray = ['g', 'n', 'u', 'z', 'd'];
+const alphabet = 'abcdefghilmnopqrstuvz';
+const  array2 = [];
+
+for (let i = 0; i < charactersArray.length; i++) {
+  const lettere = charactersArray[i]
+
+  switch (lettere) {
+    case 'a':
+      array2.push(1);
+      break;
+    case 'b':
+      array2.push(2);
+      break;
+    case 'c':
+      array2.push(3);
+      break;
+    case 'd':
+      array2.push(4);
+      break;
+    case 'e':
+      array2.push(5);
+      break;
+    case 'f':
+      array2.push(6);
+      break;
+    case 'g':
+      array2.push(7);
+      break;
+    case 'h':
+      array2.push(8);
+      break;
+    case 'i':
+      array2.push(9);
+      break;
+    case 'l':
+      array2.push(10);
+      break;
+    case 'm':
+      array2.push(11);
+      break;
+    case 'n':
+      array2.push(12);
+      break;
+    case 'o':
+      array2.push(13);
+      break;
+    case 'p':
+      array2.push(14);
+      break;
+    case 'q':
+      array2.push(15);
+      break;
+    case 'r':
+      array2.push(16);
+      break;
+    case 's':
+      array2.push(17);
+      break;
+    case 't':
+      array2.push(18);
+      break;
+    case 'u':
+      array2.push(19);
+      break;
+    case 'v':
+      array2.push(20);
+      break;
+    case 'z':
+      array2.push(21);
+      break;
+   
+    default:
+      console.log(`Non vi sono più lettere`);
+  }
+}
+
+console.log(array2);
