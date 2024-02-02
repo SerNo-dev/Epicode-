@@ -117,10 +117,11 @@ for (let i = 0; i < cars.length; i++) {
 const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ]
-let n = 0;
-while (numericArray[n] !== 32 && n < numericArray.length) {
-  console.log(numericArray[n]);
-  i++;
+let  n = 0
+while(n < numericArray.length){
+  if(numericArray[n] === 32){
+    break;
+  }
 }
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
