@@ -40,7 +40,7 @@ let arrayInvertito = invertiArray(pets);
 
 console.log(arrayInvertito);
 
-console.log('***ESERCIZIO3***')
+console.log('***ESERCIZIO3***');
 
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
@@ -52,7 +52,7 @@ function sposta(array) {
   return copia;
 }
 let spostato = sposta(pets);
-console.log(spostato)
+console.log(spostato);
 console.log('***ESERCIZIO4***')
 /* ESERCIZIO 5
     Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.
@@ -81,7 +81,7 @@ const cars = [
 for (i = 0; i < cars.length; i++) {
   cars[i].licensePlate = '45g257f'
 }
-console.log(cars)
+console.log(cars);
 console.log('***ESERCIZIO5***')
 /* ESERCIZIO 6
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
@@ -93,7 +93,7 @@ console.log(cars);
 for (i = 0; i < cars.length; i++) {
   cars[i].trims.pop()
 }
-console.log(cars)
+console.log(cars);
 
 console.log('***ESERCIZIO6***')
 /* ESERCIZIO 7
