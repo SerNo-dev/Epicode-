@@ -180,7 +180,7 @@
       let h1 = document.querySelector('h1');
 
       h1.addEventListener('click', () => {
-        h1.textContent = h1.textContent.slice(0, -1);
+        h1.textContent= h1.textContent.slice(0, -1);
       });
     }
 
@@ -214,7 +214,7 @@
         thtabella[i] = document.createElement('th');
         trtabella.appendChild(thtabella[i]);
       }
-      thtabella[0].textContent = 'Immagine'
+      thtabella[0].innerText = 'Immagine'
       thtabella[1].textContent = 'Nome prodotto'
       thtabella[2].textContent = 'Quantità'
       thtabella[3].textContent = 'prezzo'
@@ -226,7 +226,9 @@
      Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
   */
 
-    const addRow = function () { }
+    const addRow = function () { 
+
+    }
 
     /* ESERCIZIO 14
     Crea una funzione che nasconda le immagini della tabella quando eseguita
