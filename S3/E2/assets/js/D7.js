@@ -251,6 +251,45 @@ console.log(basso);
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
+////////////////
+function cercaFilm (id){
+ const film = movies.filter(element => {
+  return element.imdbID === id;
+ } );
+ return film
+}
+
+console.log(cercaFilm('tt4154796'))
+
+////////////////////////
+
+function film(id){
+  return movies.find(element =>
+    element.imdbID === id  // il find non vuole le graffe
+  )
+}
+
+console.log(film('tt2395427'))
+console.log('**Esercizio 14 **')
+////////
+const elenco = document.getElementById('elenco');
+ movies.forEach(element =>{ // foreach perchè qua non serve creare un array ma usare lo stesso
+  let option = document.createElement('option');
+  option.setAttribute('value', element.imdbID);
+  option.innerText = element.Title;
+  elenco.appendChild(option);
+ })
+
+ document.getElementById('scegli').addEventListener('click',function (){
+  let imdbID = elenco.value ;// il value che parte dall'html,value dell'option
+  const filmScelto = movies.find((element) => {
+    return element.imdbID === imdbID;
+  });
+  console.log(filmScelto);
+  document.getElementById('titolo').innerText = filmScelto.Title;
+  document.getElementById('anno').innerText= `Anno di produzione : ${filmScelto.Year}`
+  document.getElementById('locandina').innerHTML = `<img src ="${filmScelto.Poster}" alt="locandina ${filmScelto.Title}" />`
+});
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
