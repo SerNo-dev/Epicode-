@@ -39,7 +39,7 @@ console.log(ricava)
 */
 function calcolaSomma(array) {
   let somma = 0;
-  array.forEach((element) => {
+  array.forEach((element) => { // foreach si limita a fare ma non restituisce nulla
     somma += element;
   });
   return somma;
@@ -60,6 +60,12 @@ function calcola (){
       return totale
 }
 console.log(calcola())
+///
+let valoriSomma = [1.2, 3, 4, 5, 56];
+const totaleValori = valoriSomma.reduce((val1, val2) => val1 + val2, 0);
+console.log(totaleValori);
+
+///
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
@@ -221,6 +227,7 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+
 let arrayanno = [];
 
 movies.forEach((element, index) => {
@@ -230,6 +237,18 @@ movies.forEach((element, index) => {
 let basso = Math.min(...arrayanno);
 
 console.log(basso);
+//////////////////////////
+function piuVecchio(){
+  let anno = 2100;
+  movies.forEach((element) =>
+  {
+    if(Number(element.Year) < anno){ // da stringa a numero
+      anno = Number(element.Year);
+    }
+  });
+  console.log(anno);
+}
+piuVecchio();
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
@@ -293,3 +312,4 @@ const elenco = document.getElementById('elenco');
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
