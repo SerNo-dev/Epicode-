@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+ 
+}
+
+span {
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
+}
+.rosso{
+    color: red;
+    background-color: black;
+}
