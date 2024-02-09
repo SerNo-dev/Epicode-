@@ -551,6 +551,7 @@ background();
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+
 function aggiungi (){
   let lista = document.querySelector('#myList');
   let li = document.createElement('li');
@@ -563,10 +564,21 @@ aggiungi()
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+function svuota (){
+  let lista = document.querySelector('#myList');
+  lista.innerHTML =''
+}
 
+svuota()
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+function test (){
+  let tr = document.querySelector('tr');
+  tr.classList.add('test');
+  console.log(tr)
+}
+test()
 
 // [EXTRA] JS Avanzato
 
