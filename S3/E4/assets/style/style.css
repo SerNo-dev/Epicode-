@@ -5,13 +5,20 @@ body {
  
 }
 
-span {
-    display: block;
-    padding: 10px;
+table {
+    border-collapse: collapse;
+    margin: 0 auto; 
+}
+
+td {
     border: 1px solid black;
-    margin: 10px;
+    padding: 10px;
+    text-align: center;
 }
-.rosso{
-    color: red;
-    background-color: black;
+
+.rosso {
+    background-color: red;
+    color: white;
+    font-weight: bold;
 }
+

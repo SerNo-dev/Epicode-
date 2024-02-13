@@ -1,46 +1,51 @@
-let contenitore = document.getElementById('container');
-let button = document.getElementById('bottone');
-let numeriUsciti = document.getElementById('numeriusciti')
-let arrayNumeriUsciti = [];
-let numeriSpan = []
+document.addEventListener('DOMContentLoaded', () => {
+    const table = document.getElementById('container');
+    const numeriUsciti = document.getElementById('numeriusciti');
+    const button = document.getElementById('bottone');
+    let arrayNumeriUsciti = [];
 
-
-function numeriInTabella() {
-    let numeroInSpan = 1;
-    for (i = 0; i < 9; i++) {
-        let span = document.createElement('span');
-        contenitore.appendChild(span);
-        for (k = 0; k < 10; k++) {
-            if (numeroInSpan <= 90) {
-                numeriSpan.push(numeroInSpan);
-                span.innerText += `[${numeroInSpan}]  `
-                 numeroInSpan++;
-            } else {
-                break;
+    function numeriInTabella() {
+        let numeroInSpan = 1;
+        for (let i = 0; i < 9; i++) {
+            let row = table.insertRow();
+            for (let k = 0; k < 10; k++) {
+                if (numeroInSpan <= 90) {
+                    let cell = row.insertCell();
+                    cell.textContent = numeroInSpan;
+                    numeroInSpan++;
+                } else {
+                    break;
+                }
             }
         }
     }
 
-}
+    numeriInTabella();
 
-numeriInTabella();
+    button.addEventListener('click', () => {
+        let random;
+        do {
+            random = Math.floor(Math.random() * 90 + 1);
+        } while (arrayNumeriUsciti.includes(random));
+        
+        arrayNumeriUsciti.push(random);
+        
+        let p = document.createElement('p');
+        p.textContent = random;
+        numeriUsciti.appendChild(p);
 
-button.addEventListener('click', () => {
-    let random = Math.floor(Math.random() * 90 + 1);
-    let p = document.createElement('p');
-    arrayNumeriUsciti.push(random);
-    p.innerText = random;
-    numeriUsciti.appendChild(p);
-    confronta()
-})
-
-
-const confronta = () => {
-    arrayNumeriUsciti.forEach(numero => {
-        let span = document.querySelector('span'); 
-        if (span) {
-            span.classList.add('rosso');
-        }
+        confronta(random);
     });
-}
 
+    function confronta(numero) {
+        let rows = table.rows;
+        for (let i = 0; i < rows.length; i++) {
+            let cells = rows[i].cells;
+            for (let j = 0; j < cells.length; j++) {
+                if (cells[j].textContent === numero.toString()) {
+                    cells[j].classList.add('rosso');
+                }
+            }
+        }
+    }
+});
