@@ -1,0 +1,106 @@
+body {
+  margin: 0; 
+  padding : 0;
+  box-sizing: border-box;
+background-image: url('/S1/E4/assets/img/sfondo.png');
+background-attachment: scroll;
+font-family: 'Poppins', sans-serif;
+}  
+
+header {
+    text-align: center;
+   
+    background: linear-gradient( 30deg, #036d86, #009cc1);
+    margin: 10px;
+    padding: 10px;
+    font-size : 1.5em;
+    box-shadow: 4px 4px 4px grey;
+}
+header  a{
+  color: white;
+  text-decoration: none;
+  
+   
+}
+#marioRossi{
+  color: white;
+}
+header a::before {
+  content: "*";
+}
+nav li {
+  list-style: none;
+}
+main {
+  background-color: white;
+  margin: 10px;
+  box-shadow: 4px 4px 4px  grey; 
+  box-shadow: -4px 4px 4px  grey; 
+  padding: 10px;
+}
+
+code {
+  background-color: rgba(169, 169, 169, 0.2);
+  border: 1px solid #888; 
+  border-radius: 5px; 
+  padding: 5px; 
+  
+ 
+}
+
+ #table-head {
+  background: linear-gradient( 30deg, #fdfdfd, #0e06e78c);
+  
+ 
+}
+
+tbody tr:nth-child(even){
+ background-color: #f3f3f3
+}
+table {
+  border-bottom: 1px solid #3f6bca;
+}
+iframe {
+  border-radius: 30px;
+  height: 150px;
+}
+
+#novita {
+  background: linear-gradient( 30deg, #fdfdfd, #e3e3e3);
+}
+#novita h2 {
+  text-align: center ;
+}
+fieldset {
+border: none;
+}
+  
+#inserisci{
+  background-color: #3f6bca;
+  color: white;
+}
+aside {
+  background: linear-gradient( 30deg, #fdfdfd, #e3e3e3);
+}
+.data{
+  text-align: end;
+}
+
+footer {
+  text-align: center;
+   
+  background: linear-gradient( 30deg, #036d86, #009cc1);
+  margin: 10px;
+  padding: 10px;
+  font-size : 1.5em;
+  box-shadow: 4px 4px 4px grey;
+}
+#purple {
+  color: purple;
+}
+#purple:hover{
+  color: black;
+}
+.impTesto{
+color: #a02471;
+}

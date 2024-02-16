@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background-color: black;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+nav {
+    background-color: white;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    padding: 12px;
+    height: 50vh;
+    text-align: center;
+    background-position: 50% ;
+}
+
+h1 {
+    font-size: 2.4em;
+}
+
+button {
+    background-color: #f04c2f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 5px;
+    border-width: 0;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+h2,
+h1 {
+    color: #25a2c3;
+    line-height: 1;
+
+}
+
+#notebook {
+    border-radius: 50%;
+}
+
+div {
+    background-color: #ee2200;
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+    height: 23vh;
+    padding: 30px;
+    margin: 50px 0;
+}
+
+#garantisce {
+    color: white;
+}
+
+cite {
+    display: block;
+    padding-bottom: 10px;
+}
+
+aside {
+
+    text-align: center;
+}
+
+figure {
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+figure img {
+    width: 418px;
+}
+
+#contatta {
+    color: white;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    background-color: #22aacc;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+
+hr {
+    width: 200px;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+.copy {
+    font-size: 0.9em;
+}
