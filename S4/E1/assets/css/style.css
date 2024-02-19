@@ -280,13 +280,12 @@ footer a {
       }
 
      article iframe,section {
-        margin: 0 auto;
-     
+         margin: 0 auto;
      }
 
       iframe,section {
         display: inline-block;
-       
+
       }
       iframe {
         width: 45vw;
