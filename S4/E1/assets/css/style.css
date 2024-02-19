@@ -287,13 +287,10 @@ footer a {
       iframe,section {
         display: inline-block;
        
-        
-        
       }
       iframe {
         width: 45vw;
         height: 280px;
-        
         
       }
       section {
@@ -309,9 +306,16 @@ footer a {
         display: inline-block;
        width: 370px;
        
-       
-       
+
       }
       
     
    }
+
+   @media print {
+    header, footer, iframe,section,aside {
+        display: none;
+    }
+
+   
+}
