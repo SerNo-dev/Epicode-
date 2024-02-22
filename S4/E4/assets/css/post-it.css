@@ -34,46 +34,45 @@ html,body{
   
 }
 #Post-it1 {
-    background-color: #f8f8c6;
+    background: linear-gradient(180deg, #f8f8c6, rgba(0, 0, 0, 0.1)) ;   
      transform: rotate(-5deg);
 }
 #Post-it2 {
-    background-color: #c7f7c9;
+    background: linear-gradient(180deg, #c7f7c9, rgba(0, 0, 0, 0.1)) ; 
      transform: rotate(2deg);
 }
 #Post-it3 {
-    background-color: #c6c6f4;
+    background: linear-gradient(180deg, #c6c6f4, rgba(0, 0, 0, 0.1)) ;
     transform: rotate(-8deg);
 }
 #Post-it4 {
-    background-color: #c6f5c8;
+    background: linear-gradient(160deg, #c6f5c8, rgba(0, 0, 0, 0.1)) ;                                        
     transform: rotate(10deg);
 }
 #Post-it5 {
-    background-color: #c6f5c8;
+    background: linear-gradient(180deg, #f8f8c6, rgba(0, 0, 0, 0.1)) ;
     transform: rotate(-4deg);
 }
 #Post-it6 {
-    background-color: #c6f5c8;
+    background: linear-gradient(180deg, #c6c6f4, rgba(0, 0, 0, 0.2)) ;
     transform: rotate(-8deg);
 }
 #Post-it7 {
-    background-color: #c6f5c8;
+    background: linear-gradient(180deg, #f8f8c6, rgba(0, 0, 0, 0.1)) ; 
     transform: rotate(-4deg);
 }
 #Post-it8 {
-    background-color: #c6f5c8;
+     background: linear-gradient(160deg, #c6f5c8, rgba(0, 0, 0, 0.1)) ;   
     transform: rotate(4deg);
 }
 .postit:hover {
     animation: dritto 1s ease forwards ;
 }
 @keyframes dritto {
-    0% {
-        transform: rotate(-5deg) scale(1); 
-        
+    from {
+        transform: rotate(-5deg) scale(1);    
     }
-    100% {
+    to {
         transform: rotate(0deg) scale(1.5); 
         z-index: 1;
      
