@@ -40,7 +40,7 @@ nav ul li {
     padding: 10px;
     color: white;
     border-radius: 30px;
-    animation: fadeIn 10s ease forwards;
+    animation: fadeIn 12s ease forwards;
     
 }
 @keyframes fadeIn {
@@ -168,12 +168,14 @@ aside {
 footer {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 60%;
+ 
     margin-left: 70px;
+    
 }
 
 footer p {
-    padding: 7px;
+    padding: 5px;
     color: grey;
     
 }
