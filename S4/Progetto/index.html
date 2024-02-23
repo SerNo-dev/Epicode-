@@ -171,12 +171,12 @@
                             </p>
 
                         </div>
-                     
 
-                       
+
+
 
                     </div>
-                    
+
                 </article>
                 <div id="foto">
                     <img src="assets/imgs/image08.jpeg">
@@ -184,7 +184,7 @@
                     <img src="assets/imgs/image12.png">
                     <img src="assets/imgs/image14.png">
                     <img src="assets/imgs/image16.jpg">
-                 
+
                 </div>
 
                 <div id="finisce">
@@ -227,16 +227,21 @@
     </main>
 
 
-    <script>window.addEventListener('scroll', function() {
-        let header = document.querySelector('header');
-        let posizione = window.scrollY;
-        if(posizione > 300 )
-        header.style.backgroundColor = 'white';
-        else {
-            header.style.backgroundColor = '#ffc017';
+    <script>window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            let getStart = document.getElementById('inizia')
+            let posizione = window.scrollY;
+            if (posizione > 300) {
+                header.style.backgroundColor = 'white';
+                getStart.style.backgroundColor = 'green';
+            }
+            else {
+                header.style.backgroundColor = '#ffc017';
+                getStart.style.backgroundColor = '#1a1a18';
+            }
+
         }
-        
-    });</script>
+        );</script>
 </body>
 
 </html>

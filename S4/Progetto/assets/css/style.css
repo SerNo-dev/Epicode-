@@ -41,15 +41,15 @@ nav ul li {
     padding: 10px;
     color: white;
     border-radius: 30px;
-    animation: fadeIn 12s ease forwards;
+    animation: fadeIn 5s ease forwards;
     
 }
 @keyframes fadeIn {
     from {
-      background-color:black;  opacity: 0.4;
+       opacity: 0;
     }
     to {
-      background-color: green; opacity: 1;
+       opacity: 1;
     }
   }
   
