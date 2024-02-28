@@ -124,18 +124,6 @@ p {
 }
 
 #bottone1 {
-  animation: fadeInButton1 5s forwards;
-}
-
-#bottone2 {
-  animation: fadeInButton2 5s forwards;
-}
-
-#bottone1, #bottone2, #bottone3 {
-  opacity: 0;
-}
-
-#bottone1 {
   animation: fadeInButton1 1s forwards;
 }
 
