@@ -1,0 +1,21 @@
+@import '_colori.scss';
+nav{
+    margin-top: -20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    h1  {
+        margin-inline-start: 200px;
+    }
+}
+ul {
+    display: flex;
+    list-style-type: none; 
+    margin-right: 10em;
+}
+ul li a{
+    text-decoration: none;
+    margin-right: 30px;
+    color :$textColor;
+    cursor: pointer;
+}

@@ -1,0 +1,24 @@
+@import '_colori.scss';
+
+header {
+     height: 60vh;
+    background-color: $bgColore ;
+    
+}
+#container {
+    text-align: start;
+    margin-right: 40%;
+    margin-left: 12.5%;
+    
+}
+
+#container p{
+    color :$textColor;
+    margin-top: -2%;
+    width: 90%;
+}
+#container h2 {
+    font-size: 4em;
+    width: 50%;
+}
+

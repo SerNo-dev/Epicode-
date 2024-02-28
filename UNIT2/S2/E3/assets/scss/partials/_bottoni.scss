@@ -1,0 +1,26 @@
+#bottoni {
+    display: flex;
+    margin-left: 15em;
+    margin-top: 2em;
+}
+
+#bottoni button {
+    margin-right: 12px;
+    padding: 18px;
+    cursor: pointer;
+    color: $textColor;
+    border-radius: 5px; 
+   
+}
+
+#bottone1 {
+    background-color: $coloreBotton1;
+}
+
+#bottone2 {
+    background-color: $coloreBotton2;
+}
+
+#bottone3 {
+    background-color: $coloreBotton3;
+}
