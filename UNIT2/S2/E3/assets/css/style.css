@@ -6,19 +6,17 @@ body {
 }
 
 nav {
-  margin-top: -20px;
-  display: flex;
-  justify-content: space-between;
-  padding: 40px;
+  background-color: #640fc5;
+  padding: 2%;
 }
 nav h1 {
-  margin-inline-start: 200px;
+  margin-inline-start: 10%;
 }
 
 ul {
   display: flex;
   list-style-type: none;
-  margin-right: 10em;
+  margin-right: 10%;
 }
 
 ul li a {
@@ -28,20 +26,22 @@ ul li a {
   cursor: pointer;
 }
 
-header {
-  height: 60vh;
-  background-color: #640fc5;
+nav #container {
+  margin-left: 10%;
+}
+
+#testata {
+  display: flex;
+  justify-content: space-between;
 }
 
 #container {
-  text-align: start;
-  margin-right: 40%;
-  margin-left: 12.5%;
+  margin-right: 50%;
 }
 
 #container p {
   color: white;
-  margin-top: -2%;
+  margin-top: -5%;
   width: 90%;
 }
 
@@ -50,15 +50,9 @@ header {
   width: 50%;
 }
 
-#bottoni {
-  display: flex;
-  margin-left: 15em;
-  margin-top: 2em;
-}
-
 #bottoni button {
-  margin-right: 12px;
-  padding: 18px;
+  margin-right: 1%;
+  padding: 3%;
   cursor: pointer;
   color: white;
   border-radius: 5px;
@@ -190,13 +184,13 @@ p {
   }
 }
 #images {
+  margin-top: -22%;
   display: flex;
   justify-content: center;
-  margin-top: 45px;
 }
 
 #images img {
-  width: 18%;
+  width: 20%;
   border-radius: 15%;
   padding: 20px;
 }

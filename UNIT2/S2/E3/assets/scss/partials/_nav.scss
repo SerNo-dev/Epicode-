@@ -1,21 +1,24 @@
 @import '_colori.scss';
 nav{
-    margin-top: -20px;
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
+    background-color: $bgColore ;
+    padding: 2%;
     h1  {
-        margin-inline-start: 200px;
+        margin-inline-start: 10%;
     }
 }
 ul {
     display: flex;
     list-style-type: none; 
-    margin-right: 10em;
+    margin-right: 10%;
+    
 }
 ul li a{
     text-decoration: none;
     margin-right: 30px;
     color :$textColor;
     cursor: pointer;
+}
+
+nav #container {
+    margin-left: 10%;
 }
