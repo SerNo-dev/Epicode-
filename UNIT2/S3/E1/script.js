@@ -71,10 +71,9 @@ aggiungi.addEventListener('click', (e) => {
     let razza = document.getElementById('razza').value;
     let animale = new Pet(nomeAnimale, proprietario, specie, razza);
     array.push(animale);
-   animale.stessoPadrone()
+    animale.stessoPadrone()
     stampa();
 })
-
 const stampa = () => {
     divPets.innerHTML = '';
     array.forEach((animale) => {
@@ -92,7 +91,4 @@ const stampa = () => {
     })
 
 }
-
-
-
 
