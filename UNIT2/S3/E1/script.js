@@ -6,30 +6,21 @@ class User {
         this.location = _location;
     }
 
-    confronto(x = this.age, y = 0) {
-        if (x > y) {
-            console.log('X é piu vecchio di Y')
-        } else {
-            console.log('Y é piu vecchio di X')
+    compareAge(anotherUser) {
+        if (this.age < anotherUser.age) {
+            console.log(`${anotherUser.firstName} è più grande di ${this.firstName}`)
+        } else if(this.age> anotherUser.age) {
+            console.log(`${this.firstName} è più grande di ${anotherUser.firstName}`)
+        } else{
+            console.log(`${this.firstName} e ${anotherUser.firstName} hanno la stessa età`)
         }
     }
 
 }
-class Persona1 extends User {
-    constructor(_eta, ...User) {
-        super(...User);
-        this.eta = _eta;
-    }
-    confronto(x = this.age, y = this.eta) {
-        if (x > y) {
-            console.log('X é piu vecchio di Y')
-        } else {
-            console.log('Y é piu vecchio di X')
-        }
-    }
-}
-const persona = new Persona1(20, 'Sergio', 'Nolasco', 30, 'Sicilia')
-persona.confronto()
+
+const persona = new User('Aldo', 'Gni', 20, 'Sicilia')
+const persona2 = new User('Marco', 'Nolasco', 10, 'Sicilia')
+persona2.compareAge(persona);
 
 
 
