@@ -9,18 +9,21 @@ class User {
     compareAge(anotherUser) {
         if (this.age < anotherUser.age) {
             console.log(`${anotherUser.firstName} è più grande di ${this.firstName}`)
-        } else if(this.age> anotherUser.age) {
+        } else if (this.age > anotherUser.age) {
             console.log(`${this.firstName} è più grande di ${anotherUser.firstName}`)
-        } else{
+        } else {
             console.log(`${this.firstName} e ${anotherUser.firstName} hanno la stessa età`)
         }
     }
 
 }
 
-const persona = new User('Aldo', 'Gni', 20, 'Sicilia')
+const persona1 = new User('Aldo', 'Gni', 20, 'Sicilia')
 const persona2 = new User('Marco', 'Nolasco', 10, 'Sicilia')
-persona2.compareAge(persona);
+persona2.compareAge(persona1);
+
+
+
 
 
 
@@ -33,22 +36,23 @@ class Pet {
     }
 
     stessoPadrone() {
-        let arrayPadroni = array.map(animale => animale.proprietario); 
+        let arrayPadroni = array.map(animale => animale.proprietario);
         let stessoProprietario = false;
-    
+
         for (let i = 0; i < arrayPadroni.length; i++) {
             if (arrayPadroni.indexOf(arrayPadroni[i]) !== i) {
-                stessoProprietario = true;
-                break; 
+                for (let j = 0; j < array.length; j++)
+                    console.log(`I cani di nome : ${array[j].nomeAnimale} hanno lo stesso proprietario : ${arrayPadroni[i]} `)
             }
         }
-    
+
         console.log(arrayPadroni);
         console.log(stessoProprietario);
-    } 
+
+    }
 
 }
-let divPets = document.getElementById('pets');
+let listaAnimali = document.getElementById('listaAnimali');
 let array = [];
 const aggiungi = document.getElementById('aggiungi');
 
@@ -66,19 +70,19 @@ aggiungi.addEventListener('click', (e) => {
     stampa();
 })
 const stampa = () => {
-    divPets.innerHTML = '';
+    listaAnimali.innerHTML = '';
     array.forEach((animale) => {
         let colonna1 = document.createElement('td');
         colonna1.innerText = `${animale.nomeAnimale}`;
         let colonna2 = document.createElement('td');
         colonna2.innerText = `${animale.proprietario}`;
         let colonna3 = document.createElement('td');
-        colonna3.innerText = `${animale.specie}`;
+        colonna3.innerText = `${animale.specie}`
         let colonna4 = document.createElement('td');
-        colonna4.innerText = `${animale.razza}`;
+        colonna4.innerText = `${animale.razza}`
         let riga = document.createElement('tr');
         riga.append(colonna1, colonna2, colonna3, colonna4);
-        divPets.appendChild(riga);
+        listaAnimali.appendChild(riga)
     })
 
 }
