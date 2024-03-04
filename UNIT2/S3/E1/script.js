@@ -37,7 +37,6 @@ class Pet {
 
     stessoPadrone() {
         let arrayPadroni = array.map(animale => animale.proprietario);
-        let stessoProprietario = false;
 
         for (let i = 0; i < arrayPadroni.length; i++) {
             if (arrayPadroni.indexOf(arrayPadroni[i]) !== i) {
@@ -47,8 +46,7 @@ class Pet {
         }
 
         console.log(arrayPadroni);
-        console.log(stessoProprietario);
-
+     
     }
 
 }
