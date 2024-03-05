@@ -6,7 +6,7 @@ contenitore.appendChild(p);
 function contatore() {
     let time = parseInt(sessionStorage.getItem('numero')) || 0;
     sessionStorage.setItem('numero', time + 1);
-    p.innerText = time + 1;
+    p.innerText = time++;
 }
 setInterval(contatore,1000)
 } )
