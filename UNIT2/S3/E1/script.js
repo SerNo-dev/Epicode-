@@ -23,10 +23,6 @@ const persona2 = new User('Marco', 'Nolasco', 10, 'Sicilia')
 persona2.compareAge(persona1);
 
 
-
-
-
-
 class Pet {
     constructor(_nomeAnimale, _proprietario, _specie, _razza) {
         this.nomeAnimale = _nomeAnimale;
@@ -51,10 +47,10 @@ class Pet {
 
 }
 let listaAnimali = document.getElementById('listaAnimali');
-let array = [];
+
 const aggiungi = document.getElementById('aggiungi');
 
-
+let array = JSON.parse(localStorage.getItem('Animali')) || [];
 
 aggiungi.addEventListener('click', (e) => {
     e.preventDefault();
@@ -64,12 +60,16 @@ aggiungi.addEventListener('click', (e) => {
     let razza = document.getElementById('razza').value;
     let animale = new Pet(nomeAnimale, proprietario, specie, razza);
     array.push(animale);
-    animale.stessoPadrone()
+
+    localStorage.setItem('Animali',JSON.stringify(array))
+    animale.stessoPadrone();
     stampa();
+
 })
 const stampa = () => {
     listaAnimali.innerHTML = '';
     array.forEach((animale) => {
+    array = JSON.parse(localStorage.getItem('Aniamli')) || [];
         let colonna1 = document.createElement('td');
         colonna1.innerText = `${animale.nomeAnimale}`;
         let colonna2 = document.createElement('td');

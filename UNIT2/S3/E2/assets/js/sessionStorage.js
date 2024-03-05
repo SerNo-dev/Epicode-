@@ -9,4 +9,4 @@ function contatore() {
     p.innerText = time++;
 }
 setInterval(contatore,1000)
-} )
+})
