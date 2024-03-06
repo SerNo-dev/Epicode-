@@ -2,6 +2,7 @@ let contenitoreCarte = document.getElementById('carte');
 let arrayCarte = [];
 let carrello = document.getElementById('carrello');
 
+const arrayChart = [];
 
 const readData = async () => {
     const risposta = await fetch('https://striveschool-api.herokuapp.com/books')
@@ -18,6 +19,7 @@ const readData = async () => {
 
 }
 readData();
+
 const stampa = (arrayCarte) => {
     contenitoreCarte.innerHTML = '';
     for (let i = 0; i < arrayCarte.length; i++) {
@@ -57,12 +59,9 @@ const stampa = (arrayCarte) => {
         contenitoreCarte.appendChild(carta);
     }
 }
-
-const arrayChart = [];
-
 const aggiungi = (libro) => {
     arrayChart.push(libro);
-    popolacarrello(libro);
+    popolacarrello(arrayChart);
 }
 
 const popolacarrello = (arrChart) => {
@@ -83,15 +82,15 @@ const popolacarrello = (arrChart) => {
         carta.appendChild(immagine);
         bodycarta.appendChild(titoloCarta);
         carta.appendChild(bodycarta);
-         console.log(arrChart[i])
         carrello.appendChild(carta);
+        console.log(arrayChart[i])
     }
 }
 
 const elimina = (libro) => {
     const indice = arrayCarte.indexOf(libro);
-        arrayCarte.splice(indice, 1);
-        const elementoDaRimuovere = contenitoreCarte.children[indice];
-            contenitoreCarte.removeChild(elementoDaRimuovere);
-         stampa(arrayCarte);
+    arrayCarte.splice(indice, 1);
+    const elementoDaRimuovere = contenitoreCarte.children[indice];
+    contenitoreCarte.removeChild(elementoDaRimuovere);
+    stampa(arrayCarte);
 }
