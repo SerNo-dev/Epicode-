@@ -4,10 +4,15 @@ const btnSecondaryImages = document.getElementById('secondaryImages');
 const bottoniEditTohide = document.querySelectorAll('div > button:nth-child(2)');
 window.addEventListener('load',init);
 const cardBody = document.getElementsByClassName('card-body');
+const parola = document.getElementById('parola');
+const ricerca = document.getElementById('search')
 let array;
 function init(){
-    editTohide()
+    editTohide();
 }
+ricerca.addEventListener('click',()=>{
+  search()
+})
 
 btnLoadImages.addEventListener('click', () => {
     loadImages(); 
@@ -79,3 +84,32 @@ const loadSecondaryImages = async() =>{
         }
     });
 });
+
+const search = async () => {
+    if (parola.value.trim() !== '') {
+        try {
+            let mountainsResponse = await fetch(BaseUrl + parola.value, {
+                headers: {
+                    Authorization: 'TXAl4tsq0AH939vI13rKvpyMo7xSgfkSwtTUiEnLKjjvEI0zqABAVoL5'
+                } 
+            });
+            let foto = await mountainsResponse.json();
+            searchImages(foto.photos);
+            array = foto;
+            console.log(foto);
+        } catch(error) {
+            console.log(error);
+        }
+    } else {
+        console.log('Il campo di ricerca è vuoto');
+    }
+}
+
+const searchImages = (photos) => {
+    let immagini = document.querySelectorAll('img');
+    immagini.forEach((img, index) => {
+        if (photos[index]) {
+            img.src = photos[index].src.large;
+        }
+    });
+}
