@@ -70,9 +70,12 @@ const loadSecondaryImages = async() =>{
   }
 
   
-bottoniEditTohide.forEach((button, index) => {
+  bottoniEditTohide.forEach((button, index) => {
     button.addEventListener('click', () => {
-        deleteItem(index);
+        const card = button.closest('.card');
+        if (card) {
+            card.style.display = 'none';
+            
+        }
     });
 });
-
