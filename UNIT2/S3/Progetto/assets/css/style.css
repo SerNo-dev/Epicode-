@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: grey;
+    overflow-x: hidden;
+}
+#shop{
+  width: 3em;
+  border-radius: 5em;
+}
+
+.card {
+  height: 100%;
+}
+/* .card .card-text {
+  overflow: auto;
+} */
+.product-image {
+  max-width: 20%; 
+  border-radius: 30%;
+  display: block;
+  margin: 30px auto;
+}
+
+.product-name {
+  color: #333;
+  margin: 0 auto;
+}
+.product-details{
+  display: flex;
+  flex-direction: column;
+}
+.product-brand {
+  color: #666; 
+  margin: 0 auto;
+}
+
+.product-price {
+  font-weight: bold; 
+  margin: 0 auto;
+}
+
+.product-description {
+  margin-top: 20px; 
+  margin: 0 auto;
+}
