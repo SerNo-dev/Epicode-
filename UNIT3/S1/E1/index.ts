@@ -49,10 +49,6 @@ const credito = document.getElementById('credito') as HTMLBodyElement;
 
 credito.innerText = `Il tuo credito è ${Call.credito} euro`;
 
-const minuti = document.getElementById('minuti') as HTMLBodyElement;
-
-minuti.innerText = `${Call.getNumeroChiamta()}`;
-
 const ricaricaInput = document.getElementById('inputRicarica') as HTMLInputElement;
 
 const btnRicarica = document.getElementById('btnRicarica') as HTMLBodyElement;
@@ -68,11 +64,12 @@ const btnChiama = document.getElementById('btnchiama') as HTMLBodyElement
 
 let contatore = 0;
 let intervallo;
-
+const minuti = document.getElementById('minuti') as HTMLBodyElement;
 btnChiama.addEventListener('click', ()=>{
   intervallo = setInterval(()=>{
     contatore++;
     console.log(contatore);
+    minuti.innerText = `Minuti passati in chiamata ${contatore}`;
     Call.chiamata(contatore);
   },60000);
 Call.chiamata(contatore);

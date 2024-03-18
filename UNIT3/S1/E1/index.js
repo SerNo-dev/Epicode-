@@ -31,8 +31,6 @@ console.log(Call.chiama404());
 console.log(Call.getNumeroChiamta());
 var credito = document.getElementById('credito');
 credito.innerText = "Il tuo credito \u00E8 ".concat(Call.credito, " euro");
-var minuti = document.getElementById('minuti');
-minuti.innerText = "".concat(Call.getNumeroChiamta());
 var ricaricaInput = document.getElementById('inputRicarica');
 var btnRicarica = document.getElementById('btnRicarica');
 btnRicarica.addEventListener('click', function () {
@@ -42,10 +40,12 @@ btnRicarica.addEventListener('click', function () {
 var btnChiama = document.getElementById('btnchiama');
 var contatore = 0;
 var intervallo;
+var minuti = document.getElementById('minuti');
 btnChiama.addEventListener('click', function () {
     intervallo = setInterval(function () {
         contatore++;
         console.log(contatore);
+        minuti.innerText = "Minuti passati in chiamata ".concat(contatore);
         Call.chiamata(contatore);
     }, 60000);
     Call.chiamata(contatore);
