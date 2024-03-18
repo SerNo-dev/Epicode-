@@ -19,14 +19,12 @@ class User implements Telefono{
     ricarica(x:number) {
      return x + this.credito
     }
-    chiamata(minuti: number):void{
-    const millisecondiInUnMinuto = 60000;
-    const costoChiamataPerMinuto = 0.20
-      if(minuti * millisecondiInUnMinuto > 0){
-        const costoTotale = costoChiamataPerMinuto * minuti;
-        this.credito -= costoTotale
+    chiamata(minuti: number): void {
+        const costoChiamataPerMinuto = 0.20;
+        const costoTotale = Math.ceil(minuti) * costoChiamataPerMinuto; 
+        const costoDaAddebitare = Math.min(costoTotale, costoChiamataPerMinuto);
+        this.credito -= costoDaAddebitare; 
         console.log(`Credito dopo la chiamata: ${this.credito}`);
-      }
     }
     chiama404 () {
         return `Il tuo credito è ${this.credito}`

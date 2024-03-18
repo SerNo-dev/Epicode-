@@ -9,13 +9,11 @@ var User = /** @class */ (function () {
         return x + this.credito;
     };
     User.prototype.chiamata = function (minuti) {
-        var millisecondiInUnMinuto = 60000;
         var costoChiamataPerMinuto = 0.20;
-        if (minuti * millisecondiInUnMinuto > 0) {
-            var costoTotale = costoChiamataPerMinuto * minuti;
-            this.credito -= costoTotale;
-            console.log("Credito dopo la chiamata: ".concat(this.credito));
-        }
+        var costoTotale = Math.ceil(minuti) * costoChiamataPerMinuto;
+        var costoDaAddebitare = Math.min(costoTotale, costoChiamataPerMinuto);
+        this.credito -= costoDaAddebitare;
+        console.log("Credito dopo la chiamata: ".concat(this.credito));
     };
     User.prototype.chiama404 = function () {
         return "Il tuo credito \u00E8 ".concat(this.credito);
