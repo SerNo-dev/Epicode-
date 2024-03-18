@@ -78,10 +78,6 @@ btnChiama.addEventListener('click', ()=>{
     Call.chiamata(contatore);
   },60000);
 Call.chiamata(contatore);
-
-setTimeout(() => {
-    Call.chiamata(contatore + 1); // Chiamata con il contatore incrementato di 1 dopo 1 minuto
-}, 60000);
 } )
 
 
