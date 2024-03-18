@@ -65,6 +65,27 @@ btnRicarica.addEventListener('click', () =>{
 
 })
 
+const btnChiama = document.getElementById('btnchiama') as HTMLBodyElement
+
+
+let contatore = 0;
+let intervallo;
+
+btnChiama.addEventListener('click', ()=>{
+  intervallo = setInterval(()=>{
+    contatore++;
+    console.log(contatore);
+    Call.chiamata(contatore);
+  },60000);
+Call.chiamata(contatore);
+
+setTimeout(() => {
+    Call.chiamata(contatore + 1); // Chiamata con il contatore incrementato di 1 dopo 1 minuto
+}, 60000);
+} )
+
+
+
 
 
 

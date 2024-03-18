@@ -41,3 +41,17 @@ btnRicarica.addEventListener('click', function () {
     var ammontareRicarica = parseInt(ricaricaInput.value);
     credito.innerText = "Il tuo credito \u00E8 ".concat(Call.ricarica(ammontareRicarica), " euro");
 });
+var btnChiama = document.getElementById('btnchiama');
+var contatore = 0;
+var intervallo;
+btnChiama.addEventListener('click', function () {
+    intervallo = setInterval(function () {
+        contatore++;
+        console.log(contatore);
+        Call.chiamata(contatore);
+    }, 60000);
+    Call.chiamata(contatore);
+    setTimeout(function () {
+        Call.chiamata(contatore + 1); // Chiamata con il contatore incrementato di 1 dopo 1 minuto
+    }, 60000);
+});
