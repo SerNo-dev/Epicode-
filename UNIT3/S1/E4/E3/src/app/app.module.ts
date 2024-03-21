@@ -11,24 +11,28 @@ import { PostattiviComponent } from './components/postattivi/postattivi.componen
 import { PostinattiviComponent } from './components/postinattivi/postinattivi.component';
 import { PostdetailComponent } from './components/postdetail/postdetail.component';
 
-
 const routes: Route[] = [
   {
     path: '',
-    component: HomeComponent
-  },{
+    component: HomeComponent,
+  },
+  {
     path: 'postattivi',
-    component: PostattiviComponent
-  }
-  ,{
+    component: PostattiviComponent,
+  },
+  {
     path: 'postinattivi',
-    component: PostinattiviComponent
-  },{
-    path : 'post/:id',
-    component: PostdetailComponent
-  }
- ]
-
+    component: PostinattiviComponent,
+  },
+  {
+    path: 'post/:id',
+    component: PostdetailComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
+];
 
 @NgModule({
   declarations: [
@@ -42,11 +46,8 @@ const routes: Route[] = [
     PostinattiviComponent,
     PostdetailComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes)
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

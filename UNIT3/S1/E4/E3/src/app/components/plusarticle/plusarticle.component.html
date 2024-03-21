@@ -4,47 +4,47 @@
         <div class="card border-0" style="width: 20rem;">
             <div class="card-body">
                 <a class="text-info"   [routerLink]="['/post', randomPosts[0].id]"> 🔗 {{ randomPosts[0].title }}</a>
-                <div class="d-flex my-2">
-                    <button type="button" class="btn btn-primary btn-sm me-1">FICTION</button>
-                    <button type="button" class="btn btn-primary btn-sm me-1">HISTORY</button>
-                    <button type="button" class="btn btn-primary btn-sm">CRIME</button>
+                <div class="container d-flex ">
+                <div class="my-2" *ngFor="let randomPost of randomPosts[0].tags">
+                    <button type="button" class="btn btn-primary btn-sm me-1">{{ randomPost }}</button>
                 </div>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Reactions: {{ randomPosts[0].reactions }} 👍</h6>
+            </div>
+                <h6 class="card-subtitle mb-2 text-body-secondary ms-3">Reactions: {{ randomPosts[0].reactions }} 👍</h6>
            
             </div>
         </div>
         <div class="card border-0" style="width: 20rem;">
             <div class="card-body">
                 <a class="text-info"   [routerLink]="['/post', randomPosts[1].id]"> 🔗 {{ randomPosts[1].title }}</a>
-                <div class="d-flex my-2">
-                    <button type="button" class="btn btn-primary btn-sm me-1">FICTION</button>
-                    <button type="button" class="btn btn-primary btn-sm me-1">HISTORY</button>
-                    <button type="button" class="btn btn-primary btn-sm">CRIME</button>
+                <div class="container d-flex">
+                    <div class="my-2" *ngFor="let randomPost of randomPosts[1].tags">
+                        <button type="button" class="btn btn-primary btn-sm me-1">{{ randomPost }}</button>
+                    </div>
                 </div>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Reactions: {{ randomPosts[1].reactions }} 👍</h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary ms-3">Reactions: {{ randomPosts[1].reactions }} 👍</h6>
             </div>
             
         </div>
         <div class="card border-0" style="width: 20rem;">
             <div class="card-body">
                 <a class="text-info"   [routerLink]="['/post', randomPosts[2].id]"> 🔗 {{ randomPosts[2].title }}</a>
-                <div class="d-flex my-2">
-                    <button type="button" class="btn btn-primary btn-sm me-1">FICTION</button>
-                    <button type="button" class="btn btn-primary btn-sm me-1">HISTORY</button>
-                    <button type="button" class="btn btn-primary btn-sm">CRIME</button>
+                <div class="container d-flex">
+                    <div class="my-2" *ngFor="let randomPost of randomPosts[2].tags">
+                        <button type="button" class="btn btn-primary btn-sm me-1">{{ randomPost }}</button>
+                    </div>
                 </div>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Reactions: {{ randomPosts[2].reactions }} 👍</h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary ms-3">Reactions: {{ randomPosts[2].reactions }} 👍</h6>
             </div>
         </div>
         <div class="card border-0" style="width: 20rem;">
             <div class="card-body">
                 <a class="text-info"   [routerLink]="['/post', randomPosts[3].id]"> 🔗 {{ randomPosts[3].title }}</a>
-                <div class="d-flex my-2">
-                    <button type="button" class="btn btn-primary btn-sm me-1">FICTION</button>
-                    <button type="button" class="btn btn-primary btn-sm me-1">HISTORY</button>
-                    <button type="button" class="btn btn-primary btn-sm">CRIME</button>
+                <div class="container d-flex">
+                    <div class="my-2" *ngFor="let randomPost of randomPosts[3].tags">
+                        <button type="button" class="btn btn-primary btn-sm me-1">{{ randomPost }}</button>
+                    </div>
                 </div>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Reactions: {{ randomPosts[3].reactions }} 👍</h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary ms-3">Reactions: {{ randomPosts[3].reactions }} 👍</h6>
             </div>
         </div> 
     </div>
