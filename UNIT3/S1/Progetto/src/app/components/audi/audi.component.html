@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="d-flex my-5">
+                <img [src]="'https://listcarbrands.com/wp-content/uploads/' + posts[5].brandLogo" class="w-75">
+                <div class=" mb-4 bg-body-tertiary rounded-3 ms-4 d-flex align-items-center w-100">
+                      <h1 class="display-5 fw-bold fs-2">Le nostre Auto {{ posts[5].brand }}</h1>
+                  </div>
+                </div>
+                <div class="d-flex flex-column">
+                    <ng-container *ngFor="let currentPost of posts; let i = index">
+                        <ng-container *ngIf="currentPost.brand.toLowerCase() === 'fiat'">
+                            <div class="card mb-3">
+                                <app-listcars [post]="currentPost"></app-listcars>
+                            </div>
+                        </ng-container>
+                    </ng-container>
+                </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>

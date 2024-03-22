@@ -1,0 +1,30 @@
+<h2 class="text-center">Auto in evidenza</h2>
+<div class="container d-flex justify-content-around">
+  <div class="card" style="width: 18rem;" [ngClass]="{'bg-danger': !randomPosts[0].available, 'bg-success': randomPosts[0].available}">
+    <img [src]="'https://www.kimballstock.com/pix/car/p/' + randomPosts[0].modelImage" class="card-img-top" >
+    <div class="card-body text-center">
+      <h5 class="card-title text-center">{{ randomPosts[0].model}}</h5>
+      <p class="card-text text-center">
+        <span class="badge text-bg-primary p-2">Anno: {{ randomPosts[0].year}} </span>
+      <span class="badge text-bg-primary mx-2 p-2">Prezzo: {{ randomPosts[0].price}} </span>
+      <span class="badge text-bg-primary my-2 p-2">Pronta consegna: {{ randomPosts[0].available ? 'Si' : 'No'}}  </span>
+      </p>
+      <a [routerLink]="['/', randomPosts[1].brand.toLowerCase()]" routerLinkActive="active" class="btn btn-primary my-2">Tutte le nostre {{ randomPosts[1].brand}}</a>
+    </div>
+  </div>
+  
+  <div class="card" style="width: 18rem;" [ngClass]="{'bg-danger': !randomPosts[1].available, 'bg-success': randomPosts[1].available}">
+    <img [src]="'https://www.kimballstock.com/pix/car/p/' + randomPosts[1].modelImage" class="card-img-top" >
+    <div class="card-body text-center">
+      <h5 class="card-title text-center">{{ randomPosts[1].model}}</h5>
+      <p class="card-text text-center">
+        <span class="badge text-bg-primary p-2">Anno: {{ randomPosts[1].year}} </span>
+      <span class="badge text-bg-primary mx-2 p-2">Prezzo: {{ randomPosts[1].price}} </span>
+      <span class="badge text-bg-primary my-2 p-2">Pronta consegna: {{ randomPosts[1].available ? 'Si' : 'No'}}  </span>
+      </p>
+      <a [routerLink]="['/', randomPosts[1].brand.toLowerCase()]" routerLinkActive="active" class="btn btn-primary my-2">Tutte le nostre {{ randomPosts[1].brand}}</a>
+    </div>
+  </div>
+</div>
+  
+  

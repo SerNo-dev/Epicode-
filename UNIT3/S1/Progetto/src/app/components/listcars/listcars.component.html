@@ -1,0 +1,11 @@
+<div class="card  " style="width: 40rem;">
+    <img [src]="'https://www.kimballstock.com/pix/car/p/' + post.modelImage" class="card-img-top" >
+    <div class="card-body text-center">
+      <h5 class="card-title text-center">{{ post.model}}</h5>
+      <p class="card-text text-center">
+        <span class="badge text-bg-primary p-2">Anno: {{ post.year}} </span>
+      <span class="badge text-bg-primary mx-2 p-2">Prezzo: {{ post.price}} </span>
+      <span class="badge text-bg-primary my-2 p-2">Pronta consegna: {{ post.available ? 'Si' : 'No'}}  </span>
+      </p>
+    </div>
+  </div>
