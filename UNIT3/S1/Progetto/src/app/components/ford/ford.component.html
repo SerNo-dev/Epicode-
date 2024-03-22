@@ -10,7 +10,7 @@
                 </div>
                 <div class="d-flex flex-column">
                     <ng-container *ngFor="let currentPost of posts; let i = index">
-                        <ng-container *ngIf="currentPost.brand.toLowerCase() === 'fiat'">
+                        <ng-container *ngIf="currentPost.brand.toLowerCase() === 'ford'">
                             <div class="card mb-3">
                                 <app-listcars [post]="currentPost"></app-listcars>
                             </div>
