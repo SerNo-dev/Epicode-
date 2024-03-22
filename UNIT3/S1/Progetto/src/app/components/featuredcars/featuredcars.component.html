@@ -9,7 +9,7 @@
       <span class="badge text-bg-primary mx-2 p-2">Prezzo: {{ randomPosts[0].price}} </span>
       <span class="badge text-bg-primary my-2 p-2">Pronta consegna: {{ randomPosts[0].available ? 'Si' : 'No'}}  </span>
       </p>
-      <a [routerLink]="['/', randomPosts[1].brand.toLowerCase()]" routerLinkActive="active" class="btn btn-primary my-2">Tutte le nostre {{ randomPosts[1].brand}}</a>
+      <a [routerLink]="['/', randomPosts[0].brand.toLowerCase()]" routerLinkActive="active" class="btn btn-primary my-2">Tutte le nostre {{ randomPosts[0].brand}}</a>
     </div>
   </div>
   
@@ -22,7 +22,7 @@
       <span class="badge text-bg-primary mx-2 p-2">Prezzo: {{ randomPosts[1].price}} </span>
       <span class="badge text-bg-primary my-2 p-2">Pronta consegna: {{ randomPosts[1].available ? 'Si' : 'No'}}  </span>
       </p>
-      <a [routerLink]="['/', randomPosts[1].brand.toLowerCase()]" routerLinkActive="active" class="btn btn-primary my-2">Tutte le nostre {{ randomPosts[1].brand}}</a>
+      <a [routerLink]="['/', randomPosts[0].brand.toLowerCase()]" routerLinkActive="active" class="btn btn-primary my-2">Tutte le nostre {{ randomPosts[1].brand}}</a>
     </div>
   </div>
 </div>
