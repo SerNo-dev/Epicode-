@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Post } from 'src/app/models/post.interface';
-import { NgModule } from '@angular/core';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
