@@ -1,0 +1,32 @@
+<div class="container d-flex mt-4">
+  <div class="col-8 flex-column">
+    <app-jumbotron></app-jumbotron>
+    <app-mainarticle></app-mainarticle>
+
+    <h4>FILTERED BY:</h4>
+
+      <div class="badges">
+        <button
+          class="badge  me-1 bg-primary" 
+          *ngFor="let tag of getUniqueTags() "
+          (click)="filteredPosts = filterPostByTag(tag)"
+          >{{ tag | uppercase }}</button
+        >
+      </div>
+ 
+    
+
+    <app-single-post *ngFor="let post of filteredPosts" [post]="post">
+        <div class="d-flex flex-column"> 
+            <input type="text" [(ngModel)]="post.title" class="card-title form-control">
+            <textarea cols="25" rows="5" class="card-text form-control" [(ngModel)]="post.body"></textarea>
+            <button class="btn btn-success mt-2">Save</button>
+        </div>
+
+
+    </app-single-post>
+  </div>
+  <div class="col-4 mt-5">
+    <app-plusarticle></app-plusarticle>
+  </div>
+</div>
