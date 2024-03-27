@@ -1,0 +1,16 @@
+<div class="container">
+    <h3 class="text-center">Prodotti preferiti</h3>
+    <div class="row">
+      <div class="col-4" *ngFor="let product of favoriteProducts ">
+        <div class="card">
+          <img [src]="product.thumbnail" [alt]="'Foto nr ' + product.id">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p>{{ product.description }}</p>
+            <div class="badge bg-primary">{{ product.price }} $</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
