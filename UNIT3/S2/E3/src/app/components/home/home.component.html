@@ -1,20 +1,27 @@
-<div class="container">
-    <div class="row">
-    <div class="col-4" *ngFor="let product of products">
-        <div class="card">
-            <img src="{{ product.thumbnail }}" alt="Foto nr {{ product.id }}">
-            <div class="card-body">
-                <h5 class="card-title">
-                    {{ product.title }} 
-                </h5>
-                <p >{{ product.description }}</p>
-                <div class="badge bg-primary">
-                    {{ product.price }} $
-                  </div>
-                  <button type="button" class="btn btn-success ms-3" (click)="add(product)">❤</button>
-            </div>
-        </div>
 
+
+<div class="container">
+  <div class="row">
+    <div class="col-4" *ngFor="let product of products">
+      <div class="card">
+        <img src="{{ product.thumbnail }}" alt="Foto nr {{ product.id }}" />
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ product.title }}
+          </h5>
+          <p>{{ product.description }}</p>
+          <div class="badge bg-primary">{{ product.price }} $</div>
+          <button
+            type="button"
+            class="btn btn-success ms-3"
+            (click)="add(product)"
+          >
+            ❤
+          </button>
+        
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-</div>
+

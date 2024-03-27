@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   products: Products[] | undefined;
   sub: Subscription | undefined;
 
+  favoriteProducts: Products[] = [];
+
   constructor(private productsSrv: ProductsService) {}
 
   ngOnInit(): void {
