@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subTodo = this.todoSrv.getTodos().subscribe(
       (todos: Todo[]) => {
-        console.log('Dati ricevuti nel componente todos:', todos);
         this.todos = todos;
         this.combineArrays();
       },
@@ -35,7 +34,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.subUsers = this.usersSrv.getUsers().subscribe(
       (users: Users[]) => {
-        console.log('Dati ricevuti nel componente users:', users);
         this.users = users;
         this.combineArrays();
       },

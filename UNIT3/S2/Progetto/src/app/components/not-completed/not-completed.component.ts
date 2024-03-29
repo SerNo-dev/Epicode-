@@ -13,7 +13,6 @@ export class NotCompletedComponent {
   constructor(private todoSrv: TodoService) {
     this.todoSrv.getTodos().subscribe(
       (todos: Todo[]) => {
-        console.log('Dati ricevuti:', todos);
         this.notcompleted = todos.filter(todo => !todo.completed);
       },
       (error) => {
