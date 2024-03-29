@@ -1,0 +1,6 @@
+<div class="card-body m-2 p-3 border rounded" *ngIf="user"
+     [ngClass]="todo.completed ? 'bg-success' : 'bg-danger'">
+  <h5 class="card-title mb-3">{{ todo.todo }}</h5>
+  <p class="card-text mb-2">Assigned to: {{ user.firstName }}</p>
+  <input class="form-check-input d-flex" type="checkbox" [checked]="todo.completed" (change)="toggleComplete(todo)">
+</div>

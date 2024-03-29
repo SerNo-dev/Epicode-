@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-6" *ngFor="let item of combinedArray">
+        <ng-container *ngIf="item.todo && item.user">
+          <div class="card mb-3" [ngClass]="{'bg-success': item.todo.completed, 'bg-danger': !item.todo.completed}">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="{{ item.user.image }}" class="card-img" alt="User Image">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.user.firstName }} {{ item.user.lastName }}</h5>
+                  <p class="card-text">Email: {{ item.user.email }}</p>
+                  <p class="card-text">Title: {{ item.user.title }}</p>
+                  <p class="card-text">Todo: {{ item.todo.todo }}</p>
+                  <p class="card-text">Completed: {{ item.todo.completed ? 'Yes' : 'No' }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  

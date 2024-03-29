@@ -1,0 +1,13 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <ul class="list-group d-flex">
+          <li class="list-group-item bg-success m-2 h-100" *ngFor="let todo of completed">
+            {{ todo.todo }}
+            <input class="form-check-input d-flex" type="checkbox" (change)="tooggleIncomplete(todo.id)">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,21 @@
+<div class="container">
+  <input type="text" class="w-100" placeholder="Enter user's name" #searchInput (input)="searchUser(searchInput.value)">
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <app-single-todo
+            class="col-lg-4 mb-3"
+            *ngFor="let item of combinedArray"
+            [todo]="item.todo"
+            [user]="item.user"
+          ></app-single-todo>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+

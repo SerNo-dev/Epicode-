@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 class="text-center">Hey Boss, what's my task for the day?</h1>
+
+    <div class="container m-5 d-flex">
+      <button class="btn btn-primary" [routerLink]="['/completed']" routerLinkActive="active">See how much we've accomplished</button>
+      <button class="btn btn-primary ms-2" [routerLink]="['/notCompleted']" routerLinkActive="active">What's left?</button>
+      <button class="btn btn-primary ms-2"[routerLink]="['/byUser']" routerLinkActive="active">By user</button>
+      <button class="btn btn-primary ms-2" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">See all</button>
+     
+</div>
