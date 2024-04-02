@@ -1,0 +1,122 @@
+<div class="container text-center">
+  <h1>Reactive Form</h1>
+</div>
+
+<div class="container">
+  <div class="col-12">
+    <form [formGroup]="form">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          formControlName="nome"
+        />
+        <span *ngIf="getFormC('nome')?.invalid && getFormC('nome')?.touched" class="d-flex justify-content-end">
+          <ng-container *ngIf="getErrorsC('nome', 'required')">
+            <strong class="text-danger">Campo Nome Obbligatorio</strong>
+          </ng-container>
+          <ng-container *ngIf="getErrorsC('nome', 'pattern')">
+            <strong class="text-danger">Il nome deve contenere solo lettere</strong>
+          </ng-container>
+        </span>
+        
+
+        <label for="cognome">Cognome</label>
+        <input
+          type="text"
+          id="cognome"
+          class="form-control"
+          formControlName="cognome"
+        />
+        <span *ngIf="getFormC('cognome')?.invalid && getFormC('cognome')?.touched" class="d-flex justify-content-end">
+          <ng-container *ngIf="getErrorsC('cognome', 'required')">
+            <strong class="text-danger">Campo cognome Obbligatoro</strong>
+          </ng-container>
+          <ng-container *ngIf="getErrorsC('cognome', 'pattern')">
+            <strong class="text-danger">Il cognome deve contenere solo lettere</strong>
+          </ng-container>
+        </span>
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          formControlName="password"
+        />
+        <span *ngIf="getFormC('password')?.invalid && getFormC('password')?.touched" class="d-flex justify-content-end">
+          <ng-container *ngIf="getErrorsC('password', 'required')">
+            <strong class="text-danger">Campo Password Obbligatorio</strong>
+          </ng-container>
+          <ng-container *ngIf="getErrorsC('password', 'pattern')">
+            <strong class="text-danger">La password deve contenere almeno 5-8 caratteri, almeno una lettera maiuscola, una lettera minuscola, un numero e un carattere speciale</strong>
+          </ng-container>
+        </span>
+
+
+        <label for="confermaPassword">Conferma Password</label>
+        <input
+          type="password"
+          id="confermaPassword"
+          class="form-control"
+          formControlName="confermaPassword"
+        />
+        <div class="radio">
+          <input type="radio" formControlName="genere" value="Uomo" id="uomo" />
+          <label for="uomo">Uomo</label>
+        </div>
+        <div class="radio">
+          <input type="radio" formControlName="genere" value="Donna" id="donna" />
+          <label for="donna">Donna</label>
+        </div>
+
+        <label for="immagine">Immagine Profilo (Inserisci URL)</label>
+        <input type="text" id="immagine" class="form-control" formControlName="immagine">
+        
+        
+  
+        <label for="Biografia" >Biografia</label>
+        <textarea type="text" class="form-control" formControlName="biografia"></textarea>
+        <span *ngIf="getFormC('biografia')?.invalid && getFormC('biografia')?.touched" class="d-flex justify-content-end">
+          <ng-container *ngIf="getErrorsC('biografia', 'minlength')">
+            <strong class="text-danger">La biografia deve contenere almeno 10 caratteri</strong>
+          </ng-container>
+          <ng-container *ngIf="getErrorsC('biografia', 'maxlength')">
+            <strong class="text-danger">La biografia può contenere al massimo 200 caratteri</strong>
+          </ng-container>
+        </span>
+        
+  
+        <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            formControlName="username"
+          />
+
+      </div>
+     
+
+
+      <button type="submit" (click)="submit()" class="btn btn-primary">
+        Invia
+      </button>
+    </form>
+  </div>
+  <div class="col-12" *ngIf="user">
+    <h2>I tuoi dati</h2>
+    <div class="container">
+        <p>Nome: {{ user.nome}}</p>
+        <p>Cognome: {{ user.cognome }}</p>
+        <p>Password {{ user.password }}</p>
+        <p>Genere: {{ user.genere }}</p>
+        <p>Immagine:</p>
+        <img *ngIf="user.immagine" [src]="user.immagine" class="img-fluid" alt="Immagine Profilo">        
+        <p>Biografia : {{ user.biografia }}</p>
+        <p>Username : {{ user.username }}</p>
+    </div>
+</div>
+</div>
