@@ -38,10 +38,9 @@ export class AppComponent implements OnInit {
       ]),
       username: this.fb.control(null, [Validators.pattern(/^[a-zA-Z]+$/)]),
       genere: this.fb.control(''),
-      biografia: this.fb.control(null, [
-        Validators.maxLength(10),
-        Validators.minLength(100),
-      ]),
+      biografia: this.fb.control(null),
+
+      
     })),
       this.form.valueChanges.subscribe((status) => {
         console.log('Stato del form', status);

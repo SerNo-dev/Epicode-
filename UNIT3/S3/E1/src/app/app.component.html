@@ -76,18 +76,7 @@
         <input type="text" id="immagine" class="form-control" formControlName="immagine">
         
         
-  
-        <label for="Biografia" >Biografia</label>
-        <textarea type="text" class="form-control" formControlName="biografia"></textarea>
-        <span *ngIf="getFormC('biografia')?.invalid && getFormC('biografia')?.touched" class="d-flex justify-content-end">
-          <ng-container *ngIf="getErrorsC('biografia', 'minlength')">
-            <strong class="text-danger">La biografia deve contenere almeno 10 caratteri</strong>
-          </ng-container>
-          <ng-container *ngIf="getErrorsC('biografia', 'maxlength')">
-            <strong class="text-danger">La biografia può contenere al massimo 200 caratteri</strong>
-          </ng-container>
-        </span>
-        
+    
   
         <label for="username">Username</label>
           <input
@@ -98,10 +87,11 @@
           />
 
       </div>
-     
+      
+      <label for="biografia">Biografia</label>
+      <textarea class="form-control" formControlName="biografia"></textarea>
 
-
-      <button type="submit" (click)="submit()" class="btn btn-primary">
+      <button type="submit" (click)="submit()" class="btn btn-primary"  [disabled]="form.invalid">
         Invia
       </button>
     </form>
