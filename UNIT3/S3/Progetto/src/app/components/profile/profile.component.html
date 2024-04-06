@@ -1,0 +1,7 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Profilo</h2>
+  <div *ngIf="showFavorites">
+    <app-preferiti [favorites]="favorites"></app-preferiti>
+  </div>
+</div>
+<router-outlet></router-outlet>

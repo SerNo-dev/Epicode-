@@ -1,0 +1,21 @@
+<div class="container mt-5 ms-1">
+    <span class="badge bg-primary rounded-pill w-25">{{ movie.vote_average }}</span>
+    <div class="d-flex">
+      <div class="card ">
+        <img
+          [src]="urlmg + movie.poster_path"
+          class="card-img-top"
+          alt="Movie Poster"
+        />
+        <div class="card-body bg-warning">
+          <h5 class="card-title">{{ movie.title }}</h5>
+          <p class="card-text text-break  ">
+            {{movie.original_title}} <br>
+            {{movie.popularity }}📈<br>
+            {{ movie.release_date}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

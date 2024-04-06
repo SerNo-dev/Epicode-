@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <h1 class="d-flex justify-content-center">I nostri utenti</h1>
+    <div *ngIf="loading" class="text-center mt-5">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Caricamento...</span>
+      </div>
+    </div>
+    <ul class="list-group" *ngIf="!loading">
+      <li class="list-group-item mt-4" *ngFor="let user of users" routerLinkActive="active">
+        Nome: {{ user.name }} - Email: {{ user.email }}
+      </li>
+    </ul>
+  </div>
+  

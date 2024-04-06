@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-lg bg-black w-100  sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white"  [routerLink]="['/']">Movies</a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a
+                        class="nav-link text-white"
+                        [routerLink]="['/']"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }"
+                        >Home</a
+                    >
+                </li>
+                <li  *ngIf="!user" class="nav-item">
+                    <a
+                        class="nav-link text-white"
+                        [routerLink]="['/login']"
+                        routerLinkActive="active"
+                        >Accedi</a
+                    >
+                </li>
+                <li *ngIf="!user" class="nav-item">
+                    <a
+                        class="nav-link text-white"
+                        [routerLink]="['/register']"
+                        routerLinkActive="active"
+                        >Registrati</a
+                    >
+                </li>
+
+                <li  *ngIf="user" class="nav-item">
+                    <a
+                        class="nav-link text-white"
+                        [routerLink]="['/movies']"
+                        routerLinkActive="active"
+                        >Film</a
+                    >
+                </li>
+                <li  *ngIf="user" class="nav-item">
+                    <a
+                        class="nav-link text-white"
+                        [routerLink]="['/utenti']"
+                        routerLinkActive="active"
+                        >Utenti</a
+                    >
+                </li>
+                <li *ngIf="user" class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle text-white"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      [routerLink]="['/profile']"
+                      routerLinkActive="active"
+                    >
+                      Profilo
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" [routerLink]="['/profile/details']">Dettagli</a></li>
+                      <li><a class="dropdown-item" [routerLink]="['/profile/favorites']">Preferiti</a></li>
+                      <!-- Aggiungi altri elementi del menu a tendina se necessario -->
+                    </ul>
+                  </li>
+                  
+                  
+                  
+                  
+            </ul>
+        </div>
+    </div>
+    <h4 *ngIf="user" class="text-white float-end me-3">
+        Benvenuto {{ user.user.name }}
+    </h4>
+    <button type="button" class="btn btn-danger float-end" *ngIf="user" (click)="logout()">
+        Logout
+    </button>
+
+</nav>
+
