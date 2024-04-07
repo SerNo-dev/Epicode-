@@ -13,35 +13,10 @@
       "id": 3
     },
     {
-      "email": "pippo@live.it",
-      "password": "$2a$10$1cyi.eL9tq.qi1TXtfTHOOm/QDoKiSMQhWTTSP2.dcbDSl9sUAloe",
+      "email": "pippo@pippo.it",
+      "password": "$2a$10$ElIDAz3A1AdsuXoHH.ayB.FJDOwsrYB91gSi7tYjtWEjzme0qHKP6",
       "name": "Pippo",
       "id": 4
-    },
-    {
-      "email": "intell@hotmail.it",
-      "password": "$2a$10$.TVmNrQwnSvIBvC4wz9IbOIBp9fgGk4BsgDj98Pz6ZfK.eBNJQiWm",
-      "name": "Mario",
-      "confirmPassword": "super1",
-      "id": 5
-    },
-    {
-      "email": "pipo@live.it",
-      "password": "$2a$10$EvDWMTGssk.sVAoXwm77YOnq1ev.BqK8KDn7rW/qTYYBhLObljOj.",
-      "name": "Sergio",
-      "id": 6
-    },
-    {
-      "email": "banksy@live.it",
-      "password": "$2a$10$aNAd2POdxWCKRkvzgSQ1ruWdsMmOov9OcJ9LpuLFc1swTWMIkR7DS",
-      "name": "Banksy",
-      "id": 7
-    },
-    {
-      "email": "mari@live.it",
-      "password": "$2a$10$9Xcne89egAeVFcUfpAlZ3.2KJqU8q3HlMKkiOpj9AAYyaZ.PBwdxa",
-      "name": "Mario",
-      "id": 8
     }
   ],
   "favorites": [
