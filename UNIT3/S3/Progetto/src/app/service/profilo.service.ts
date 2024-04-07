@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Movies } from '../models/movies.interface'; 
+import { Movies } from '../models/movies.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProfiloService {
-  private favoritesSubject = new BehaviorSubject<Movies[]>(this.getFavoritesFromLocalStorage());
+  private favoritesSubject = new BehaviorSubject<Movies[]>(
+    this.getFavoritesFromLocalStorage()
+  );
   favorites$ = this.favoritesSubject.asObservable();
-
 
   constructor() {}
 

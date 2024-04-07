@@ -14,45 +14,34 @@
     },
     {
       "email": "pippo@live.it",
-      "password": "$2a$10$vreRL0vq7Q//oRpwe0UhKeg2scPj/bmjBNpHB2KHh6RKYIHPoFk82",
-      "name": "Marco",
+      "password": "$2a$10$1cyi.eL9tq.qi1TXtfTHOOm/QDoKiSMQhWTTSP2.dcbDSl9sUAloe",
+      "name": "Pippo",
       "id": 4
     },
     {
-      "email": "ciccio@live.it",
-      "password": "$2a$10$FnHD7MFnMLhyR0c7mh/YyeVr2BsOCUKZRT3k7VSHcbjkX4fxkwYau",
-      "name": "Marco",
+      "email": "intell@hotmail.it",
+      "password": "$2a$10$.TVmNrQwnSvIBvC4wz9IbOIBp9fgGk4BsgDj98Pz6ZfK.eBNJQiWm",
+      "name": "Mario",
+      "confirmPassword": "super1",
       "id": 5
     },
     {
-      "email": "pipp@live.it",
-      "password": "$2a$10$nnOgL3ZE.18bzRi3paojkOhWxYKk0pvdkIXQhq.qV2h/GnLNUpu7a",
-      "name": "Mario",
+      "email": "pipo@live.it",
+      "password": "$2a$10$EvDWMTGssk.sVAoXwm77YOnq1ev.BqK8KDn7rW/qTYYBhLObljOj.",
+      "name": "Sergio",
       "id": 6
     },
     {
-      "email": "us@live.it",
-      "password": "$2a$10$Rpof4wUd/s6b32uailUCdu.5CbamIEumGOJEL2O1UVC50HjcaBGM.",
-      "name": "Userr",
+      "email": "banksy@live.it",
+      "password": "$2a$10$aNAd2POdxWCKRkvzgSQ1ruWdsMmOov9OcJ9LpuLFc1swTWMIkR7DS",
+      "name": "Banksy",
       "id": 7
     },
     {
-      "email": "ella@live.it",
-      "password": "$2a$10$Qrayt6TO3lK0b0sSU62MkecjvErsysxkDgtrFzdBiseNQgM0rBiue",
-      "name": "Marco",
-      "id": 8
-    },
-    {
-      "email": "mario@live.it",
-      "password": "$2a$10$mO4h.jSYmhRuYYz85uC2Fe/HLgDP5YBNzT8N/gNUoRL6uACOtmM7m",
+      "email": "mari@live.it",
+      "password": "$2a$10$9Xcne89egAeVFcUfpAlZ3.2KJqU8q3HlMKkiOpj9AAYyaZ.PBwdxa",
       "name": "Mario",
-      "id": 9
-    },
-    {
-      "email": "back@live.it",
-      "password": "$2a$10$PMYErNIX6Ee.w2fBCRp9teJCLXh9SGzEo1kv8uDKOW1htfukVZS1m",
-      "name": "Marcolino",
-      "id": 10
+      "id": 8
     }
   ],
   "favorites": [

@@ -72,13 +72,11 @@ export class AuthService {
       case 'Incorrect password':
         return throwError('password errata');
         break;
-      case 'Cannot find user':
+      default :
         return throwError('Utente non trovato');
-        break;
-
-      default:
-        return throwError('Errore nella chiamata');
         break;
     }
   }
+  
+
 }
