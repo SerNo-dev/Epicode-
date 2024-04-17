@@ -17,6 +17,12 @@
       "password": "$2a$10$ElIDAz3A1AdsuXoHH.ayB.FJDOwsrYB91gSi7tYjtWEjzme0qHKP6",
       "name": "Pippo",
       "id": 4
+    },
+    {
+      "email": "banksy@live.it",
+      "password": "$2a$10$D8OKMkGpVbGJbJ9g6SrwjO7fKDyZgHSmw0gnP.DNOD0asKokCn1Oq",
+      "name": "Sergio",
+      "id": 5
     }
   ],
   "favorites": [
