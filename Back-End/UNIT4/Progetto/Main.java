@@ -60,14 +60,19 @@ public class Main {
             scanner.nextLine();
 
             if (scelta >= 1 && scelta <= 5) {
-
-                playlist[scelta - 1].play();
+                Riproduzione elemento = playlist[scelta - 1];
+                if (elemento instanceof Immagine) {
+                    ((Immagine) elemento).show();
+                } else {
+                    elemento.play();
+                }
             } else if (scelta != 0) {
                 System.out.println("Indice non valido. Riprova.");
             }
         } while (scelta != 0);
 
         System.out.println("Fine del programma.");
+
     }
 
 
