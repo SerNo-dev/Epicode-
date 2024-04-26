@@ -8,7 +8,6 @@ public class Riviste extends LibriRiviste {
         super(codiceISBN, titolo, annoPubblicazione, numeroPagine);
         this.periodicita = periodicita;
     }
-
     public Periodicita getPeriodicita() {
         return periodicita;
     }

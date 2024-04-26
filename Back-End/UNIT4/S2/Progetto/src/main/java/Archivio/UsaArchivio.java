@@ -64,10 +64,6 @@ public class UsaArchivio {
         System.out.println(libriCercatiPerAutore);
 
 
-
-
-
-
         String listaLibri = libri.stream()
                 .filter(libro -> libro instanceof Libri)
                 .map(libro -> {
