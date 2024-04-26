@@ -12,20 +12,20 @@ public class Main {
         List<Product> Prodotti = new ArrayList<>();
 
         Prodotti.add(new Product(1,"Signore Degli Anelli","Books",40));
-        Prodotti.add(new Product(1,"Signore ","Books",220));
-        Prodotti.add(new Product(1,"Harry Potter","Books",240));
-        Prodotti.add(new Product(1,"ComputerScience","Books",40));
+        Prodotti.add(new Product(4,"Signore ","Books",220));
+        Prodotti.add(new Product(5,"Harry Potter","Books",240));
+        Prodotti.add(new Product(33,"ComputerScience","Books",40));
 
-        Prodotti.add(new Product(1,"Mutande","Baby",40));
-        Prodotti.add(new Product(1,"calzini","Baby",220));
-        Prodotti.add(new Product(1,"Giocattoli","Baby",240));
-        Prodotti.add(new Product(1,"Cellulari","Baby",40));
+        Prodotti.add(new Product(3,"Mutande","Baby",40));
+        Prodotti.add(new Product(20,"calzini","Baby",220));
+        Prodotti.add(new Product(30,"Giocattoli","Baby",240));
+        Prodotti.add(new Product(40,"Cellulari","Baby",40));
 
 
-        Prodotti.add(new Product(1,"Moto","Boys",40));
-        Prodotti.add(new Product(1,"Playstation","Boys",220));
-        Prodotti.add(new Product(1,"Sigarette","Boys",240));
-        Prodotti.add(new Product(1,"Macchina","Boys",40));
+        Prodotti.add(new Product(40,"Moto","Boys",40));
+        Prodotti.add(new Product(23,"Playstation","Boys",220));
+        Prodotti.add(new Product(123,"Sigarette","Boys",240));
+        Prodotti.add(new Product(11,"Macchina","Boys",40));
 
 
 
@@ -41,13 +41,24 @@ public class Main {
 
 
         Customer cliente = new Customer(233, "Pippo", 2);
+        Customer cliente1 = new Customer(2, "Marco", 2);
+        Customer cliente2 = new Customer(43, "Carlo", 2);
 
 
         List<Order> Ordini = new ArrayList<>();
 
+        List<Product> boys = Prodotti.stream()
+                .filter(prodotto -> "Boys".equals(prodotto.getCategory()))
+                .map(boy -> {
+                    boy.setPrice(boy.getPrice() * 0.90);
+                    return boy;
+                })
+                .collect(Collectors.toList());
+
+        System.out.println(boys);
 
         Order order1 = new Order(20, "avaiable", LocalDate.of(2022, 10, 5), LocalDate.of(2023, 10, 10), baby, cliente);
-        Order order2 = new Order(20, "avaiable", LocalDate.of(2022, 10, 5), LocalDate.of(2023, 10, 10), baby, cliente);
+        Order order2 = new Order(20, "avaiable", LocalDate.of(2022, 10, 5), LocalDate.of(2023, 10, 10), boys, cliente1);
         Order order3 = new Order(20, "avaiable", LocalDate.of(2022, 10, 5), LocalDate.of(2023, 10, 10), baby, cliente);
         Ordini.add(order1);
         Ordini.add(order2);
@@ -69,15 +80,6 @@ public class Main {
 
 
 
-        List<Product> boys = Prodotti.stream()
-                .filter(prodotto -> "Boys".equals(prodotto.getCategory()))
-                .map(boy -> {
-                    boy.setPrice(boy.getPrice() * 0.90);
-                    return boy;
-                })
-                .collect(Collectors.toList());
-
-        System.out.println(boys);
 
     }
 }
