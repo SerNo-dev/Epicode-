@@ -23,17 +23,16 @@ public class Archivio {
         archivio.add(rivista);
     }
 
+
+
     public void rimuoviElemento(String codiceISBN) {
-        boolean elementoTrovato = false;
-        for (int i = 0; i < archivio.size(); i++) {
-            LibriRiviste elemento = archivio.get(i);
-            if (elemento.getCodiceISBN().equals(codiceISBN)) {
-                archivio.remove(i);
-                elementoTrovato = true;
-                i--;
-            }
-        }
-        if (!elementoTrovato) {
+
+        boolean elementoTrovato = archivio.stream()
+                .anyMatch(elemento -> elemento.getCodiceISBN().equals(codiceISBN));
+
+        if (elementoTrovato) {
+            archivio.removeIf(elemento -> elemento.getCodiceISBN().equals(codiceISBN));
+        } else {
             System.out.println("Nessun libro con il codice ISBN " + codiceISBN + " trovato nell'archivio.");
         }
     }
