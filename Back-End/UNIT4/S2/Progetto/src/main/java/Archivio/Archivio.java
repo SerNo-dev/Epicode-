@@ -2,7 +2,7 @@ package Archivio;
 
 import Classi.Libri;
 import Classi.LibriRiviste;
-import Classi.Riviste;
+
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,13 +15,12 @@ public class Archivio {
         this.archivio = archivio;
     }
 
-    public void aggiuntaLibro(LibriRiviste libro) {
+
+
+    public void aggiuntaElmento(LibriRiviste libro) {
         archivio.add(libro);
     }
 
-    public void aggiuntaRivista(Riviste rivista) {
-        archivio.add(rivista);
-    }
 
 
 
