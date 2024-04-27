@@ -1,6 +1,8 @@
 package Archivio;
 
 import Classi.Libri;
+import Classi.Periodicita;
+import Classi.Riviste;
 import Classi.LibriRiviste;
 import org.apache.commons.io.FileUtils;
 
@@ -20,8 +22,9 @@ public class UsaArchivio {
                 new Libri("Z-12345-67", "1984", 1949, 328, "George Orwell", "distopia"),
                 new Libri("W-98765-43", "Orgoglio e pregiudizio", 1823, 432, "Jane Austen", "romanzo"),
                 new Libri("V-54321-09", "Cronache del ghiaccio e del fuoco: Il gioco del trono", 1996, 694, "George R.R. Martin", "fantasy"),
-                new Libri("U-10987-65", "Il piccolo principe", 1943, 96, "Antoine de Saint-Exupéry", "favola")
-        );
+                new Libri("U-10987-65", "Il piccolo principe", 1943, 96, "Antoine de Saint-Exupéry", "favola"),
+                new Riviste("R-12345", "La Rivista Mensile", 2024, 50, Periodicita.MENSILE),
+                new Riviste("R-67890", "La Rivista Trimestrale", 2024, 100, Periodicita.SEMESTRALE));
 
         Archivio archivio = new Archivio(new ArrayList<>(libri));
         System.out.println("Archivio iniziale:");
@@ -29,7 +32,7 @@ public class UsaArchivio {
 
 
         try {
-            archivio.aggiuntaLibro(new Libri("U-10-65", "Il caneasa", 1943, 96, "Antoine de Saint-Exupéry", "favola"));
+            archivio.aggiuntaElmento(new Libri("U-10-65", "Il caneasa", 1943, 96, "Antoine de Saint-Exupéry", "favola"));
             System.out.println("Aggiunto nuovo libro:");
             System.out.println(archivio);
         } catch (IllegalArgumentException e) {
@@ -42,21 +45,22 @@ public class UsaArchivio {
         System.out.println("Archivio dopo rimozione Libri: ");
         System.out.println(archivio);
 
+
         try {
-            LibriRiviste LibroCercatoperISBN = archivio.ricerca("Z-12345-67");
-            System.out.println("Libro cercato per ISBN: ");
+            LibriRiviste LibroCercatoperISBN = archivio.ricerca("R-67890");
+            System.out.println("Libro o rivista cercata per ISBN: ");
             System.out.println(LibroCercatoperISBN);
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("Libro Non trovato");
+            System.out.println("Libro o rivista Non trovato");
         }
 
         try {
             LibriRiviste libroCercatoPerAnno = archivio.ricercaPerAnno(1943);
-            System.out.println("Libro cercato per Anno: ");
+            System.out.println("Libro o rivista cercato per Anno: ");
             System.out.println(libroCercatoPerAnno);
 
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("Libro non trovato per anno");
+            System.out.println("Libro o rivista non trovata per anno");
         }
 
         System.out.println("Ricerca per autore: ");
