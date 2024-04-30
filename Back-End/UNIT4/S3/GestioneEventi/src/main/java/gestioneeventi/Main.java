@@ -29,7 +29,7 @@ public class Main {
 
       // dao.save(evento1);
 
-       Evento ev = dao.getByID(4);
+       Evento ev = dao.getByID(7);
 
         System.out.println(ev);
 
