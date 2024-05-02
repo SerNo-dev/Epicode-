@@ -18,7 +18,7 @@ public class Evento {
 
     private String descrizione;
     @Enumerated(EnumType.STRING)
-    @Column(name = "tipo_evento")
+    @Column(name = "tipo_evento" )
     private TipoEvento tipoevento;
 
     private int numeroMassimoPartecipanti;

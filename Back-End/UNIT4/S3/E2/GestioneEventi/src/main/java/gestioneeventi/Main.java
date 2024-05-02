@@ -36,7 +36,7 @@ public class Main {
 
         ev.setTipoevento(TipoEvento.PRIVATO);
 
-        dao.save(ev);
-      // dao.delete(ev);
+       // dao.save(ev);
+       dao.delete(ev);
     }
 }
