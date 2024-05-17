@@ -79,7 +79,7 @@ public class Runner implements CommandLineRunner {
 
 
 
-        LocalDate dataPrenotazione = LocalDate.of(2090, 5, 10);
+        LocalDate dataPrenotazione = LocalDate.of(2023, 5, 10);
         Utente utente = ctx.getBean("utente1", Utente.class);
         Postazione postazione = ctx.getBean("postazione1", Postazione.class);
         try {
