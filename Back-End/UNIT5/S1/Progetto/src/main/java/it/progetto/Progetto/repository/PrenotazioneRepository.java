@@ -16,6 +16,8 @@ public interface PrenotazioneRepository extends JpaRepository<Prenotazione, Inte
     @Query("SELECT p FROM Prenotazione p WHERE p.utente = :utente AND p.dataPrenotazione = :dataPrenotazione")
     List<Prenotazione> findPrenotazioniByUtenteAndDataPrenotazione( Utente utente,LocalDate dataPrenotazione);
 
+     @Query("SELECT p FROM Prenotazione p WHERE p.postazione = :postazione AND p.dataPrenotazione = :dataPrenotazione")
+    List<Prenotazione> findPrenotazioniByPostazioneAndDataPrenotazione(Postazione postazione, LocalDate dataPrenotazione);
 
 
 

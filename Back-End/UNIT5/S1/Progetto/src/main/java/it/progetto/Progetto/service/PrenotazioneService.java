@@ -46,26 +46,43 @@ public class PrenotazioneService {
     }
 
 
-    public void effettuaPrenotazione(Utente utente, Postazione postazione, LocalDate dataPrenotazione) {
-        List<Prenotazione> prenotazioniEsistenti = findPrenotazioniByUtenteAndDataPrenotazione(utente, dataPrenotazione);
+     public List<Prenotazione> findPrenotazioniByPostazioneAndDataPrenotazione(Postazione postazione, LocalDate dataPrenotazione) {
+        return prenotazioneRepository.findPrenotazioniByPostazioneAndDataPrenotazione(postazione, dataPrenotazione);
+    }
 
-        for (Prenotazione prenotazione : prenotazioniEsistenti) {
-            if (prenotazione.getDataPrenotazione().isEqual(dataPrenotazione)) {
-                System.out.println("Prenotazione trovata: " + prenotazione);
-                throw new IllegalStateException("Prenotazione già effettuata per l'utente e la data specificati.");
-            }
+
+    
+
+    public void effettuaPrenotazione(Utente utente, Postazione postazione, LocalDate dataPrenotazione) {
+
+        List<Prenotazione> prenotazioniEsistentiUtente = findPrenotazioniByUtenteAndDataPrenotazione(utente, dataPrenotazione);
+
+
+        if (!prenotazioniEsistentiUtente.isEmpty()) {
+            throw new IllegalStateException("Prenotazione già effettuata per l'utente e la data specificati.");
         }
+
+
+        List<Prenotazione> prenotazioniEsistentiPostazione = findPrenotazioniByPostazioneAndDataPrenotazione(postazione, dataPrenotazione);
+
+
+        if (!prenotazioniEsistentiPostazione.isEmpty()) {
+            throw new IllegalStateException("La postazione è già prenotata per la data specificata.");
+        }
+
 
         Prenotazione nuovaPrenotazione = new Prenotazione();
         nuovaPrenotazione.setDataPrenotazione(dataPrenotazione);
         nuovaPrenotazione.setPostazione(postazione);
         nuovaPrenotazione.setUtente(utente);
 
+
         salvaPrenotazione(nuovaPrenotazione);
 
-        System.out.println("Nuova prenotazione effettuata con successo!");
 
+        System.out.println("Nuova prenotazione effettuata con successo!");
     }
+
 
 
 
