@@ -1,5 +1,6 @@
 package it.progetto.Progetto.repository;
 
+import it.progetto.Progetto.bean.Postazione;
 import it.progetto.Progetto.bean.Prenotazione;
 import it.progetto.Progetto.bean.Utente;
 import org.springframework.data.jpa.repository.JpaRepository;
