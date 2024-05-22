@@ -30,6 +30,7 @@ public class AutoreService {
         autoreBlog.setCognome(autoreDto.getCognome());
         autoreBlog.setDataDiNascita(autoreDto.getDataDiNascita());
         autoreBlog.setEmail(autoreDto.getEmail());
+        autoreBlog.setAvatar("https://ui-avatars.com/api/?name="+autoreBlog.getNome()+"+"+autoreBlog.getCognome());
         autoreRepository.save(autoreBlog);
         return "Autore con id =" + autoreBlog.getId() + " salvato con successo";
     }
@@ -51,6 +52,7 @@ public class AutoreService {
             autore.setCognome(autoreDto.getCognome());
             autore.setDataDiNascita(autoreDto.getDataDiNascita());
             autore.setEmail(autoreDto.getEmail());
+            autore.setAvatar("https://ui-avatars.com/api/?name="+autore.getNome()+"+"+autore.getCognome());
             autoreRepository.save(autore);
             return autore;
 

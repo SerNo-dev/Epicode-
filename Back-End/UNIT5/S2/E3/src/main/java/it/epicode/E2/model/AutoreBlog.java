@@ -25,22 +25,4 @@ public class AutoreBlog {
     @OneToMany(mappedBy = "autore")
     private List<Blog> postsBlog;
 
-
-    public AutoreBlog(String nome, String cognome, String email, LocalDate dataDiNascita) {
-        this.nome = nome;
-        this.cognome = cognome;
-        this.email = email;
-        this.dataDiNascita = dataDiNascita;
-        this.avatar= generateAvatarLink();
-    }
-    public AutoreBlog() {
-
-    }
-
-
-    private String generateAvatarLink() {
-        String baseUrl = "https://ui-avatars.com/api/";
-        String nameParameter = "?name=" + nome.replace(" ", "+") + "+" + cognome.replace(" ", "+");
-        return baseUrl + nameParameter;
-    }
 }
