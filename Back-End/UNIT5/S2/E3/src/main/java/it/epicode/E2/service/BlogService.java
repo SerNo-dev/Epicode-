@@ -72,7 +72,7 @@ public class BlogService {
     public Blog updateBlogPost(int id, BlogPostDto blogPostDto) {
         Optional<Blog> blogPostOptional = getBlogPostById(id);
         if (blogPostOptional.isPresent()) {
-            Blog blogPost = new Blog();
+            Blog blogPost = blogPostOptional.get();
             blogPost.setTitolo(blogPostDto.getTitolo());
             blogPost.setCategoria(blogPostDto.getCategoria());
             blogPost.setContenuto(blogPostDto.getContenuto());
