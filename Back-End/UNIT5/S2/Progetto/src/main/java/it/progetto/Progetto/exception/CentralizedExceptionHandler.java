@@ -25,7 +25,7 @@ public class CentralizedExceptionHandler extends ResponseEntityExceptionHandler 
     }
 
     @ExceptionHandler(DipendenteNonTrovatoException.class)
-    public ResponseEntity<Object> dispositivoNonTrovatoHandler(DipendenteNonTrovatoException e) {
+    public ResponseEntity<Object> dipendenteNonTrovatoHandler(DipendenteNonTrovatoException e) {
         Error error = new Error();
         error.setMessage(e.getMessage());
         error.setDataErrore(LocalDateTime.now());
@@ -45,11 +45,4 @@ public class CentralizedExceptionHandler extends ResponseEntityExceptionHandler 
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
 
-    public ResponseEntity<Object> handleDispositivoNonTrovatoException(DispositivoNontrovatoException e) {
-        Error error = new Error();
-        error.setMessage(e.getMessage());
-        error.setDataErrore(LocalDateTime.now());
-        error.setStatoErrore(HttpStatus.NOT_FOUND);
-        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
-    }
 }
